@@ -1,0 +1,498 @@
+# ============================================================
+# QuartaSMP_Core — Сообщения (все через MiniMessage)
+# ============================================================
+# Поддерживаются:
+#   <gradient:#HEX:#HEX>текст</gradient>
+#   <color:#HEX>текст</color>
+#   <bold>, <italic>, <underlined>, <strikethrough>
+#   <rainbow>, <gold>, <gray>, <dark_gray>, <yellow>, <red>, <green>
+#   <newline> — перенос строки
+#   Плейсхолдеры: %player%, %level%, %exp%, %task%, %progress%, %target%, %week%, %week_id%, %missing%, %price%, %current%, %item%
+#
+# ВАЖНО: Тег <prefix> НЕ существует в MiniMessage.
+# Префикс добавляется программно через MessagesConfig.prefixed().
+# Не используй <prefix> в YAML-строках!
+
+prefix: '<gradient:#FF6B6B:#4ECDC4>[QuartaSMP]</gradient> '
+
+# --- Русские названия материалов и сущностей ---
+materials:
+  COBBLESTONE: Булыжник
+  IRON_INGOT: Железный слиток
+  DIAMOND: Алмаз
+  GOLD_INGOT: Золотой слиток
+  GOLDEN_APPLE: Золотое яблоко
+  ENCHANTED_GOLDEN_APPLE: Зачарованное золотое яблоко
+  DIAMOND_PICKAXE: Алмазная кирка
+  ROTTEN_FLESH: Гнилая плоть
+  BONE: Кость
+  STRING: Нить
+  FEATHER: Перо
+  GUNPOWDER: Порох
+  BLAZE_ROD: Огненный стержень
+  ENDER_PEARL: Жемчуг Края
+  EXPERIENCE_BOTTLE: Пузырёк опыта
+  WRITABLE_BOOK: Книга с пером
+  EMERALD: Изумруд
+  BLACK_STAINED_GLASS_PANE: ' '
+  GRAY_STAINED_GLASS_PANE: ' '
+  LIME_STAINED_GLASS_PANE: ' '
+  RED_STAINED_GLASS_PANE: ' '
+  GREEN_STAINED_GLASS_PANE: ' '
+  DIRT: Земля
+  STONE_PICKAXE: Каменная кирка
+  COOKED_BEEF: Стейк
+  LAVA_BUCKET: Ведро лавы
+  SHEARS: Ножницы
+  WHEAT: Пшеница
+  FISHING_ROD: Удочка
+  ENCHANTING_TABLE: Стол зачарований
+  BREWING_STAND: Зельеварка
+  FURNACE: Печь
+  POTION: Зелье
+  BOW: Лук
+  ARROW: Стрела
+  SHIELD: Щит
+  TOTEM_OF_UNDYING: Тотем бессмертия
+  NETHERITE_INGOT: Незеритовый слиток
+  NETHERITE_SCRAP: Незеритовый лом
+  ANCIENT_DEBRIS: Древние обломки
+  END_CRYSTAL: Кристалл Края
+  SHULKER_SHELL: Панцирь шалкера
+  HEART_OF_THE_SEA: Сердце моря
+  NAUTILUS_SHELL: Раковина наутилуса
+  TRIDENT: Трезубец
+  SCUTE: Чешуя
+  HONEY_BOTTLE: Бутылочка мёда
+  HONEYCOMB: Соты
+  AMETHYST_SHARD: Осколок аметиста
+  COPPER_INGOT: Медный слиток
+  RAW_IRON: Сырое железо
+  RAW_GOLD: Сырое золото
+  RAW_COPPER: Сырая медь
+  MANGROVE_LOG: Мангровое бревно
+  MUD: Грязь
+  MUD_BRICKS: Грязевые кирпичи
+  PACKED_MUD: Утрамбованная грязь
+  ECHO_SHARD: Осколок эха
+  DISC_FRAGMENT: Фрагмент пластинки
+  BRUSH: Щётка
+  ANGLER_POTTERY_SHERD: Черепок «Рыбак»
+  ARCHER_POTTERY_SHERD: Черепок «Лучник»
+  ARMS_UP_POTTERY_SHERD: Черепок «Руки вверх»
+  BLADE_POTTERY_SHERD: Черепок «Клинок»
+  BREWER_POTTERY_SHERD: Черепок «Зельевар»
+  BURN_POTTERY_SHERD: Черепок «Пламя»
+  DANGER_POTTERY_SHERD: Черепок «Опасность»
+  EXPLORER_POTTERY_SHERD: Черепок «Исследователь»
+  FRIEND_POTTERY_SHERD: Черепок «Друг»
+  HEART_POTTERY_SHERD: Черепок «Сердце»
+  HEARTBREAK_POTTERY_SHERD: Черепок «Разбитое сердце»
+  HOWL_POTTERY_SHERD: Черепок «Вой»
+  MINER_POTTERY_SHERD: Черепок «Шахтёр»
+  MOURNER_POTTERY_SHERD: Черепок «Скорбящий»
+  PLENTY_POTTERY_SHERD: Черепок «Изобилие»
+  PRIZE_POTTERY_SHERD: Черепок «Награда»
+  SHEAF_POTTERY_SHERD: Черепок «Сноп»
+  SHELTER_POTTERY_SHERD: Черепок «Убежище»
+  SKULL_POTTERY_SHERD: Черепок «Череп»
+  SNORT_POTTERY_SHERD: Черепок «Фырканье»
+  SUSPICIOUS_STEW: Подозрительное рагу
+  OAK_BOAT: Дубовая лодка
+  CHEST_MINECART: Вагонетка с сундуком
+  FURNACE_MINECART: Вагонетка с печью
+  HOPPER_MINECART: Вагонетка с воронкой
+  TNT_MINECART: Вагонетка с динамитом
+  COMMAND_BLOCK_MINECART: Вагонетка с командным блоком
+  OAK_CHEST_BOAT: Дубовая лодка с сундуком
+  SPRUCE_CHEST_BOAT: Еловая лодка с сундуком
+  BIRCH_CHEST_BOAT: Берёзовая лодка с сундуком
+  JUNGLE_CHEST_BOAT: Тропическая лодка с сундуком
+  ACACIA_CHEST_BOAT: Акациевая лодка с сундуком
+  DARK_OAK_CHEST_BOAT: Лодка из тёмного дуба с сундуком
+  MANGROVE_CHEST_BOAT: Мангровая лодка с сундуком
+  BAMBOO_CHEST_RAFT: Бамбуковый плот с сундуком
+  BAMBOO_RAFT: Бамбуковый плот
+  MUSIC_DISC_5: Пластинка «5»
+  MUSIC_DISC_OTHERSIDE: Пластинка «Otherside»
+  MUSIC_DISC_RELIC: Пластинка «Relic»
+  RECOVERY_COMPASS: Компас восстановления
+  GOAT_HORN: Козий рог
+  SPYGLASS: Подзорная труба
+  GLOW_INK_SAC: Светящийся чернильный мешок
+  GLOW_ITEM_FRAME: Светящаяся рамка
+  GLOW_BERRIES: Светящиеся ягоды
+  POWDER_SNOW_BUCKET: Ведро порошкового снега
+  AXOLOTL_BUCKET: Ведро с аксолотлем
+  TADPOLE_BUCKET: Ведро с головастиком
+  TROPICAL_FISH_BUCKET: Ведро с тропической рыбой
+  PUFFERFISH_BUCKET: Ведро с иглобрюхом
+  SALMON_BUCKET: Ведро с лососем
+  COD_BUCKET: Ведро с треской
+  WATER_BUCKET: Ведро воды
+  MILK_BUCKET: Ведро молока
+  BUCKET: Ведро
+  # --- Дополнительные материалы для наград (rewards) ---
+  COD: Треска
+  SALMON: Лосось
+  TROPICAL_FISH: Тропическая рыба
+  PUFFERFISH: Иглобрюх
+  COOKED_COD: Печёная треска
+  COOKED_SALMON: Печёный лосось
+  COOKED_PORKCHOP: Жареная свинина
+  COOKED_MUTTON: Жареная баранина
+  COOKED_CHICKEN: Жареная курица
+  COOKED_RABBIT: Жареная крольчатина
+  LEATHER: Кожа
+  WHITE_WOOL: Белая шерсть
+  BONE_MEAL: Костная мука
+  GOLDEN_CARROT: Золотая морковь
+  BAKED_POTATO: Печёный картофель
+  BEETROOT_SOUP: Свекольный суп
+  PUMPKIN_PIE: Тыквенный пирог
+  MELON_SLICE: Ломтик арбуза
+  HAY_BLOCK: Тюк сена
+  COMPOSTER: Компостер
+  SUGAR: Сахар
+  GREEN_DYE: Зелёный краситель
+  YELLOW_DYE: Жёлтый краситель
+  OAK_SAPLING: Саженец дуба
+  COAL: Уголь
+  TORCH: Факел
+  LANTERN: Фонарь
+  POWERED_RAIL: Электрические рельсы
+  FLINT: Кремень
+  GLASS: Стекло
+  BLAST_FURNACE: Плавильная печь
+  DEEPSLATE_BRICKS: Глубинные каменные кирпичи
+  LAPIS_LAZULI: Лазурит
+  REDSTONE: Редстоун
+  IRON_PICKAXE: Железная кирка
+  IRON_SWORD: Железный меч
+  TNT: Динамит
+  FIREWORK_ROCKET: Фейерверк
+  SLIME_BALL: Слизь
+  PHANTOM_MEMBRANE: Перепонка фантома
+  PRISMARINE_SHARD: Призмариновый осколок
+  PRISMARINE_CRYSTALS: Призмариновый кристалл
+  PRISMARINE_BRICKS: Призмариновые кирпичи
+  BLAZE_POWDER: Огненный порошок
+  GLISTERING_MELON_SLICE: Сверкающий ломтик арбуза
+  MAGMA_CREAM: Магмовый крем
+  MAGMA_BLOCK: Магмовый блок
+  GOLD_NUGGET: Золотой самородок
+  GOLDEN_BOOTS: Золотые ботинки
+  GOLDEN_SWORD: Золотой меч
+  GOLDEN_HOE: Золотая мотыга
+  OBSIDIAN: Обсидиан
+  END_STONE: Эндерняк
+  END_STONE_BRICKS: Эндерняковые кирпичи
+  CHORUS_FRUIT: Плод хоруса
+  CHORUS_PLANT: Хорус
+  PURPUR_BLOCK: Пурпурный блок
+  ENDER_EYE: Око Эндера
+  ENDER_CHEST: Эндер-сундук
+  PURPLE_SHULKER_BOX: Фиолетовый шалкер-ящик
+  ELYTRA: Элитры
+  DRAGON_HEAD: Голова дракона
+  EGG: Яйцо
+  RED_MUSHROOM: Красный гриб
+  RABBIT_HIDE: Кроличья шкурка
+  ITEM_FRAME: Рамка
+  LOOM: Ткацкий станок
+  HONEY_BLOCK: Медовый блок
+  NETHER_WART: Адский нарост
+  FERMENTED_SPIDER_EYE: Приготовленный паучий глаз
+  FLINT_AND_STEEL: Огниво
+  LEAD: Поводок
+  RESPAWN_ANCHOR: Якорь возрождения
+  BEACON: Маяк
+  CONDUIT: Морской проводник
+  NETHER_STAR: Звезда Незера
+  NETHERITE_UPGRADE_SMITHING_TEMPLATE: Незеритовый кузнечный шаблон
+  NETHERITE_PICKAXE: Незеритовая кирка
+  NETHERITE_SWORD: Незеритовый меч
+  NETHERITE_CHESTPLATE: Незеритовый нагрудник
+  ANVIL: Наковальня
+  LIGHTNING_ROD: Громоотвод
+  CROSSBOW: Арбалет
+  IRON_AXE: Железный топор
+  DIAMOND_BLOCK: Алмазный блок
+  EMERALD_BLOCK: Изумрудный блок
+  LODESTONE: Магнетит
+  JUKEBOX: Проигрыватель
+  LECTERN: Кафедра
+  GRINDSTONE: Точило
+  CARTOGRAPHY_TABLE: Стол картографа
+  SMITHING_TABLE: Стол кузнеца
+  MAP: Карта
+  BELL: Колокол
+  CRAFTING_TABLE: Верстак
+  COAL_BLOCK: Угольный блок
+  GOLD_BLOCK: Золотой блок
+  IRON_BLOCK: Железный блок
+  QUARTZ_BLOCK: Кварцевый блок
+  SOUL_TORCH: Факел душ
+  SOUL_CAMPFIRE: Костёр душ
+  ENCHANTED_BOOK: Зачарованная книга
+  GLOWSTONE: Светокамень
+  GLOWSTONE_DUST: Светокаменная пыль
+  GHAST_TEAR: Слеза гаста
+  SPIDER_EYE: Паучий глаз
+  IRON_ORE: Железная руда
+  COPPER_ORE: Медная руда
+  GOLD_ORE: Золотая руда
+  LAPIS_ORE: Лазуритовая руда
+  REDSTONE_ORE: Редстоуновая руда
+  DIAMOND_ORE: Алмазная руда
+  COAL_ORE: Угольная руда
+  NETHER_QUARTZ_ORE: Кварцевая руда Незера
+  NETHER_GOLD_ORE: Золотая руда Незера
+  DEEPSLATE: Сланец
+  RAIL: Рельсы
+  STONE: Камень
+  GRAVEL: Гравий
+  SAND: Песок
+  WHEAT_SEEDS: Семена пшеницы
+  CARROT: Морковь
+  POTATO: Картофель
+  BEETROOT: Свёкла
+  PUMPKIN: Тыква
+  MELON: Арбуз
+  APPLE: Яблоко
+  BREAD: Хлеб
+  SUGAR_CANE: Сахарный тростник
+  CACTUS: Кактус
+  DANDELION: Одуванчик
+  OAK_LOG: Дубовое бревно
+  OAK_PLANKS: Дубовые доски
+  STONE_BRICKS: Каменные кирпичи
+  BRICKS: Кирпичи
+  LADDER: Лестница
+  CHEST: Сундук
+  OAK_FENCE: Дубовой забор
+  OAK_DOOR: Дубовая дверь
+  OAK_SIGN: Дубовая табличка
+  CAMPFIRE: Костёр
+  PAINTING: Картина
+  FLOWER_POT: Цветочный горшок
+  KELP: Ламинария
+  PRISMARINE: Призмарин
+  SEAGRASS: Морская трава
+  NETHERRACK: Незерак
+  BLACKSTONE: Чернокамень
+  BASALT: Базальт
+  SOUL_SAND: Песок душ
+  SOUL_SOIL: Почва душ
+  NETHER_WART_BLOCK: Блок адского нароста
+  SHROOMLIGHT: Грибосвет
+  CRIMSON_STEM: Багровый стебель
+  WARPED_STEM: Искажённый стебель
+  WITHER_SKELETON_SKULL: Череп скелета-иссушителя
+  CAKE: Торт
+  STONE_BRICK_STAIRS: Ступеньки из каменных кирпичей
+  GLASS_PANE: Стеклянная панель
+  CLAY: Глина
+  CLAY_BALL: Комок глины
+  BARREL: Бочка
+  OAK_FENCE_GATE: Калитка из дуба
+  TERRACOTTA: Терракота
+  RED_BED: Красная кровать
+  SCAFFOLDING: Строительные леса
+  IRON_BOOTS: Железные ботинки
+  DRIED_KELP: Сушёная ламинария
+  SEA_LANTERN: Морской фонарь
+  SPONGE: Губка
+  BRAIN_CORAL: Мозговой коралл
+  BOOKSHELF: Книжная полка
+  BOOK: Книга
+  DIAMOND_CHESTPLATE: Алмазный нагрудник
+  SADDLE: Седло
+  COMPASS: Компас
+  CLOCK: Часы
+  BOWL: Миска
+  STICK: Палка
+  BRICK: Кирпич
+  NETHER_BRICK: Адский кирпич
+  IRON_NUGGET: Железный самородок
+  DIAMOND_SWORD: Алмазный меч
+  DIAMOND_HELMET: Алмазный шлем
+  DIAMOND_LEGGINGS: Алмазные поножи
+  DIAMOND_BOOTS: Алмазные ботинки
+  CHAINMAIL_HELMET: Кольчужный шлем
+  CHAINMAIL_CHESTPLATE: Кольчужная рубаха
+  CHAINMAIL_LEGGINGS: Кольчужные поножи
+  CHAINMAIL_BOOTS: Кольчужные ботинки
+  IRON_HELMET: Железный шлем
+  IRON_CHESTPLATE: Железный нагрудник
+  IRON_LEGGINGS: Железные поножи
+  GOLDEN_HELMET: Золотой шлем
+  GOLDEN_CHESTPLATE: Золотой нагрудник
+  GOLDEN_LEGGINGS: Золотые поножи
+  LEATHER_HELMET: Кожаный шлем
+  LEATHER_CHESTPLATE: Кожаная куртка
+  LEATHER_LEGGINGS: Кожаные штаны
+  LEATHER_BOOTS: Кожаные ботинки
+
+entities:
+  ZOMBIE: Зомби
+  SKELETON: Скелет
+  CREEPER: Крипер
+  SPIDER: Паук
+  WITHER_SKELETON: Скелет-иссушитель
+  BLAZE: Ифрит
+  ENDERMAN: Эндермен
+  PIGLIN: Пиглин
+  HOGLIN: Хоглин
+  ZOMBIFIED_PIGLIN: Зомбифицированный пиглин
+  WITCH: Ведьма
+  VINDICATOR: Поборник
+  EVOKER: Заклинатель
+  RAVAGER: Разоритель
+  WOLF: Волк
+  COW: Корова
+  PIG: Свинья
+  SHEEP: Овца
+  CHICKEN: Курица
+  RABBIT: Кролик
+  HORSE: Лошадь
+  DONKEY: Осёл
+  MULE: Мул
+  CAT: Кошка
+  PARROT: Попугай
+  LLAMA: Лама
+  FOX: Лиса
+  BEE: Пчела
+  STRIDER: Страйдер
+  AXOLOTL: Аксолотль
+  GOAT: Козёл
+  FROG: Лягушка
+  TADPOLE: Головастик
+  ALLAY: Эллай
+  CAMEL: Верблюд
+  SNIFFER: Нюхач
+  VILLAGER: Житель
+  WANDERING_TRADER: Странствующий торговец
+  IRON_GOLEM: Железный голем
+  SNOW_GOLEM: Снежный голем
+  ZOMBIE_VILLAGER: Житель-зомби
+  DROWNED: Утопленник
+  HUSK: Кадавр
+  STRAY: Зимний скелет
+  PHANTOM: Фантом
+  SLIME: Слизень
+  MAGMA_CUBE: Магмовый куб
+  GHAST: Гаст
+  GUARDIAN: Страж
+  ELDER_GUARDIAN: Древний страж
+  SHULKER: Шалкер
+  SILVERFISH: Чешуйница
+  ENDERMITE: Эндермит
+  CAVE_SPIDER: Пещерный паук
+  WARDEN: Хранитель
+  PIGLIN_BRUTE: Пиглин-брут
+  ZOGLIN: Зоглин
+  DOLPHIN: Дельфин
+  TURTLE: Черепаха
+  ENDER_DRAGON: Дракон Края
+  WITHER: Иссушитель
+  PILLAGER: Разбойник
+
+# --- Сообщения команд ---
+command:
+  no-permission: <red>У тебя нет прав на эту команду.</red>
+  player-only: <red>Эта команда только для игроков.</red>
+  reload-success: <green>Конфигурация успешно перезагружена!</green>
+  reload-fail: <red>Ошибка при перезагрузке конфигурации. Проверь консоль.</red>
+  unlock-success: <green>Неделя <yellow>%week%</yellow> открыта для <yellow>%player%</yellow>!</green>
+  unlock-usage: '<red>Использование: /quartasmp unlockweek <weekId> [player]</red>'
+  week-not-found: <red>Неделя <yellow>%week%</yellow> не найдена.</red>
+  player-not-found: <red>Игрок <yellow>%player%</yellow> не найден.</red>
+  setweek-success: '<green>Текущая неделя установлена: <yellow>%week%</yellow> для
+    <yellow>%player%</yellow>!</green>'
+  setweek-usage: '<red>Использование: /quartasmp setweek <weekId> [player]</red>'
+  help-header: <gold>=== QuartaSMP Core Help ===
+  help-main: <yellow>/quartasmp</yellow> — открыть главное меню
+  help-help: <yellow>/quartasmp help</yellow> — эта справка
+  help-reload: <yellow>/quartasmp reload</yellow> — перезагрузить конфиги (admin)
+  help-unlockweek: <yellow>/quartasmp unlockweek <weekId> [player]</yellow> — открыть
+    неделю (admin)
+  help-setweek: <yellow>/quartasmp setweek <weekId> [player]</yellow> — установить
+    текущую неделю (admin)
+  help-addexp: '<yellow>/quartasmp addexp <amount> [player]</yellow> — добавить опыт (admin)'
+  addexp-success: '<green>Добавлено <yellow>%amount%</yellow> опыта для <yellow>%player%</yellow>!</green>'
+  addexp-usage: '<red>Использование: /quartasmp addexp <amount> [player]</red>'
+  addexp-invalid-amount: <red>Укажи положительное число.</red>
+
+# --- Система уровней ---
+level-up:
+- ''
+- <gradient:#FFD700:#FFA500>⚡ ПОВЫШЕНИЕ УРОВНЯ! ⚡</gradient>
+- <gradient:#FFD700:#FFA500>Ты достиг <bold>%level% уровня</bold>!</gradient>
+- ''
+- <gray>Продолжай выполнять квесты, чтобы прокачаться ещё выше!</gray>
+- ''
+
+# --- Система квестов ---
+quest:
+  week-completed:
+  - ''
+  - <gradient:#00BFFF:#1E90FF>🎉 Неделя %week% завершена! 🎉</gradient>
+  - <gray>Ты получил <yellow>%quest-points% quest-points</yellow> и <yellow>%exp%
+    опыта</yellow>!</gray>
+  - ''
+  task-completed: '<green>Задача выполнена: <yellow>%task%</yellow>!</green>'
+  task-progress: '<gray>Прогресс задачи <yellow>%task%</yellow>: <green>%progress%</green>/<yellow>%target%</yellow></gray>'
+  week-locked: <red>❌ Эта неделя пока недоступна.</red>
+  week-locked-lore: <dark_red>❌ Неделя закрыта</dark_red>
+  week-expired: <red>⏰ Время на выполнение недели истекло! Прогресс сброшен.</red>
+  no-tasks: <gray>Нет доступных задач</gray>
+  
+  # Кнопка сдачи предметов (для DELIVER)
+  deliver-button-name: <green>✔ Сдать предметы</green>
+  deliver-button-lore:
+  - <gray>Нажми, чтобы сдать все необходимые предметы</gray>
+  - '<gray>Прогресс: <yellow>%progress%</yellow>/<yellow>%target%</yellow></gray>'
+  deliver-success: <green>Ты успешно сдал предметы для задачи <yellow>%task%</yellow>!</green>
+  deliver-fail: <red>У тебя недостаточно предметов в инвентаре.</red>
+  
+  # Кнопка проверки (для HAVE_IN_INVENTORY)
+  check-button-name: <aqua>🔍 Проверить наличие</aqua>
+  check-button-lore:
+  - <gray>Нажми, чтобы проверить наличие предметов</gray>
+  - '<gray>Прогресс: <yellow>%progress%</yellow>/<yellow>%target%</yellow></gray>'
+  check-success: <green>У тебя есть все необходимые предметы для задачи <yellow>%task%</yellow>!</green>
+  check-fail: <red>У тебя недостаточно предметов. Нужно ещё <yellow>%missing%</yellow>.</red>
+
+# --- Описания задач в GUI ---
+# Плейсхолдеры: %target%, %item%, %entity%, %block%, %effect%
+task-descriptions:
+  DELIVER: '<white>Нужно сдать: <green>%target% %item%</green></white>'
+  HAVE_IN_INVENTORY: '<white>Нужно иметь: <green>%target% %item%</green></white>'
+  CRAFT: '<white>Скрафтить: <green>%target% %item%</green></white>'
+  KILL: '<white>Убить: <green>%target% %entity%</green></white>'
+  BLOCK_BREAK: '<white>Сломать: <green>%target% %block%</green></white>'
+  BLOCK_PLACE: '<white>Поставить: <green>%target% %block%</green></white>'
+  ENCHANT: '<white>Зачаровать предметов: <green>%target%</green></white>'
+  FISH: '<white>Поймать рыб: <green>%target%</green></white>'
+  BREW: '<white>Сварить зелий: <green>%target%</green></white>'
+  EAT: '<white>Съесть: <green>%target% %item%</green></white>'
+  TAME: '<white>Приручить: <green>%target% %entity%</green></white>'
+  SMELT: '<white>Переплавить: <green>%target% %item%</green></white>'
+  BUCKET_FILL: '<white>Наполнить вёдер: <green>%target% %item%</green></white>'
+  SHEAR: '<white>Остричь овец: <green>%target%</green></white>'
+  TRADE: '<white>Сделать сделок: <green>%target%</green></white>'
+  BREED: '<white>Размножить: <green>%target% %entity%</green></white>'
+  CONSUME_POTION: '<white>Выпить зелий с эффектом: <green>%target% %effect%</green></white>'
+
+# --- Магазин ---
+shop:
+  purchase-success: <green>Ты приобрёл <yellow>%item%</yellow> за <gold>%price% уровней</gold>!</green>
+  purchase-fail-level: <red>Недостаточно уровней! Нужно <gold>%price%</gold>, у тебя
+    <gold>%current%</gold>.</red>
+  purchase-fail-unknown: <red>Произошла ошибка при покупке. Сообщи администратору.</red>
+  purchase-processing: <red>Подождите, предыдущая покупка ещё обрабатывается...</red>
+  purchase-already-owned: <red>Ты уже приобрёл <yellow>%item%</yellow>!</red>
+  not-available-lore: <dark_red>✖ Недоступно для покупки</dark_red>
+  price-lore: '<gold>Цена: %price% уровней</gold>'
+  locked-lore: '<gray>Получи <yellow><bold>%level%</bold></yellow> уровень для разблокировки</gray>'

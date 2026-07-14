@@ -1,0 +1,129 @@
+# ============================================================
+# QuartaSMP_Core — Главный конфигурационный файл
+# ============================================================
+
+# --- Настройки главного меню ---
+menu:
+  title: "<gradient:#FF6B6B:#4ECDC4>✦ QuartaSMP Core ✦</gradient>"
+  size: 27 # строки * 9 (3 строки = 27 слотов)
+  fill-material: BLACK_STAINED_GLASS_PANE
+  items:
+    # Слот 11 — Уровень игрока
+    level:
+      slot: 11
+      material: EXPERIENCE_BOTTLE
+      display-name: "<gradient:#FFD700:#FFA500>✦ Твой Уровень</gradient>"
+      lore:
+        - "<gray>Текущий уровень: <yellow>%level%</yellow></gray>"
+        - "<gray>Опыт до следующего уровня: <yellow>%exp% / %exp-needed%</yellow></gray>"
+        - ""
+        - "<dark_gray>Нажми, чтобы увидеть детали</dark_gray>"
+      action: "show_level"
+
+    # Слот 13 — Квесты
+    quests:
+      slot: 13
+      material: WRITABLE_BOOK
+      display-name: "<gradient:#00BFFF:#1E90FF>✦ Квесты</gradient>"
+      lore:
+        - "<gray>Открыть меню квестов</gray>"
+        - "<dark_gray>Выполняй задания и получай награды!</dark_gray>"
+      action: "open_quests"
+
+    # Слот 15 — Магазин
+    shop:
+      slot: 15
+      material: EMERALD
+      display-name: "<gradient:#32CD32:#228B22>✦ Магазин</gradient>"
+      lore:
+        - "<gray>Потрать свои уровни на товары</gray>"
+        - "<dark_gray>Нажми, чтобы открыть магазин</dark_gray>"
+      action: "open_shop"
+
+# --- Настройки системы уровней ---
+leveling:
+  # Максимальный уровень игрока
+  max-level: 100
+
+  # Сколько exp даётся за 1 quest-point
+  exp-per-quest-point: 50
+
+  # Формула расчёта exp, необходимого для следующего уровня:
+  # base-exp + (level * multiplier-per-level)
+  # Пример: 100 + (level * 50) → для 1 уровня нужно 150 exp, для 2 — 200 и т.д.
+  exp-formula:
+    base-exp: 100
+    multiplier-per-level: 50
+
+# --- Настройки магазина ---
+shop-menu:
+  title: "<gradient:#FFD700:#FF8C00>✦ Магазин</gradient>"
+  size: 54 # 6 строк
+  fill-border:
+    material: BLACK_STAINED_GLASS_PANE
+    name: "<black> </black>"
+  fill-background:
+    material: GRAY_STAINED_GLASS_PANE
+    name: "<dark_gray> </dark_gray>"
+
+# --- Настройки квестов ---
+quests:
+  # Режим открытия недель:
+  #   global-schedule — недели открываются по глобальному расписанию
+  #                     (см. global-schedule). У всех игроков одинаково.
+  #   schedule        — недели открываются по расписанию от первого входа
+  #                     каждого игрока (устаревший per-player режим).
+  #   sequential      — неделя N доступна только после полного завершения
+  #                     недели N-1.
+  #   all-open        — все недели доступны сразу.
+  weeks-unlock-mode: global-schedule
+
+  # Глобальное расписание открытия недель (для weeks-unlock-mode: global-schedule)
+  # Все недели открываются одновременно для всех игроков.
+  # season-start: дата и время старта сезона в формате ISO-8601
+  #               (например "2026-07-10T00:00:00+02:00").
+  #               От этой даты отсчитываются интервалы.
+  # interval-days: через сколько дней открывается следующая неделя.
+  #                week_1 доступна сразу после season-start.
+  #                week_2 через interval-days дней после season-start.
+  #                week_3 через interval-days * 2 дней после season-start.
+  #                И так далее.
+  global-schedule:
+    season-start: "2026-07-10T00:00:00+02:00"
+    interval-days: 7
+
+  # Расписание открытия недель (для weeks-unlock-mode: schedule)
+  # Формат: "Xd" — через X дней после первого входа игрока на сервер
+  week-unlock-schedule:
+    week_1: "0d" # открыта сразу
+    week_2: "7d" # через 7 дней
+    week_3: "14d" # через 14 дней
+    week_4: "21d" # через 21 день
+    week_5: "28d" # через 28 дней
+    week_6: "35d" # через 35 дней
+    week_7: "42d" # через 42 дня
+    week_8: "49d" # через 49 дней
+    week_9: "56d" # через 56 дней
+    week_10: "63d" # через 63 дня
+    week_11: "70d" # через 70 дней
+    week_12: "77d" # через 77 дней
+
+  # Режим сброса прогресса квестов:
+  #   per-player — "мягкий" сброс: у каждого игрока свой таймер 7 дней с момента
+  #                открытия недели этим игроком. Если не успел — прогресс недели
+  #                сбрасывается, можно начать заново.
+  #   global     — "жёсткий" сброс: в указанный день недели (reset-day) у ВСЕХ
+  #                игроков одновременно сбрасывается прогресс по всем неделям.
+  reset-mode: per-player
+
+  # День недели для global reset (1 = Понедельник, 7 = Воскресенье)
+  # Используется только при reset-mode: global
+  reset-day: 1
+
+  # Количество дней на выполнение недели (для per-player режима)
+  week-time-limit-days: 7
+
+# --- Автосохранение данных игроков ---
+player-data:
+  # Интервал автосохранения в минутах (асинхронно)
+  auto-save-interval-minutes: 5

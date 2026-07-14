@@ -1,0 +1,182 @@
+# ============================================================
+# QuartaSMP_Core — Конфигурация магазина
+# ============================================================
+# Каждый товар:
+#   id:
+#     display-name: Название (MiniMessage)
+#     material: Материал иконки
+#     price-level: Цена в уровнях (сколько списывается при покупке)
+#     required-level: Минимальный уровень для просмотра товара (если нет = price-level)
+#     lore: Дополнительный лор (опционально)
+#     commands: Список консольных команд при покупке (%player% = имя игрока)
+#
+# ВАЛЮТА: Уровни (level) — см. config.yml leveling
+# Почему уровни, а не quest-points?
+#   - Quest-points — промежуточная валюта, конвертируемая в exp.
+#   - Уровень — основная "твёрдая" валюта, которую видно в главном меню.
+#   - Игрок копит уровни через квесты и тратит их в магазине.
+#   - Это создаёт понятную экономику: квесты → exp → уровень → магазин.
+
+shop-items:
+  # ========================
+  # ПРЕФИКСЫ
+  # ========================
+
+  # Префикс "Season Pass"
+  prefix_season_pass:
+    display-name: "<gradient:#FF6B6B:#EE5A24>✦ Префикс «Season Pass»</gradient>"
+    material: NAME_TAG
+    price-level: 15
+    required-level: 10
+    lore:
+      - "<gray>Эксклюзивный префикс в чате!</gray>"
+      - "<gray>Покажи всем, что ты прошёл сезон!</gray>"
+    commands:
+      - "lp user %player% permission set quarta.prefix.season_pass true"
+
+  # ========================
+  # ФЛАГИ ПРИВАТ-ЗОН
+  # ========================
+
+  flag_pvp:
+    display-name: "<gradient:#FF4444:#CC0000>✦ Флаг: PvP</gradient>"
+    material: DIAMOND_SWORD
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Управляй PvP в своей приват-зоне</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.pvp true"
+
+  flag_mob_spawning:
+    display-name: "<gradient:#AA44FF:#7700CC>✦ Флаг: Спавн мобов</gradient>"
+    material: ZOMBIE_SPAWN_EGG
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Управляй спавном мобов в своей зоне</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.mob-spawning true"
+
+  flag_mob_killing:
+    display-name: "<gradient:#FF6600:#CC4400>✦ Флаг: Убийство мобов</gradient>"
+    material: IRON_SWORD
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Разреши/запрети убийство мобов в зоне</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.mob-killing true"
+
+  flag_fire_spread:
+    display-name: "<gradient:#FF8800:#CC6600>✦ Флаг: Распространение огня</gradient>"
+    material: FLINT_AND_STEEL
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Управляй распространением огня</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.fire-spread true"
+
+  flag_explosion_damage:
+    display-name: "<gradient:#FF3333:#990000>✦ Флаг: Урон от взрывов</gradient>"
+    material: TNT
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Управляй уроном от взрывов в зоне</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.explosion-damage true"
+
+  flag_entry_players:
+    display-name: "<gradient:#44FF44:#00AA00>✦ Флаг: Вход игроков</gradient>"
+    material: OAK_DOOR
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Управляй входом игроков в зону</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.entry-players true"
+
+  flag_build:
+    display-name: "<gradient:#FFAA00:#CC8800>✦ Флаг: Строительство</gradient>"
+    material: BRICK
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Разреши/запрети строительство в зоне</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.build true"
+
+  flag_chest_access:
+    display-name: "<gradient:#FFD700:#B8860B>✦ Флаг: Доступ к сундукам</gradient>"
+    material: CHEST
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Управляй доступом к сундукам в зоне</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.chest-access true"
+
+  flag_interact:
+    display-name: "<gradient:#55FFFF:#00AAAA>✦ Флаг: Взаимодействие</gradient>"
+    material: LEVER
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Управляй взаимодействием с предметами</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.interact true"
+
+  flag_use:
+    display-name: "<gradient:#FF69B4:#CC5599>✦ Флаг: Использование</gradient>"
+    material: COMPARATOR
+    price-level: 5
+    required-level: 3
+    lore:
+      - "<gray>Управляй использованием предметов в зоне</gray>"
+    commands:
+      - "lp user %player% permission set quartasmp.privatezone.flag.use true"
+
+  # ========================
+  # СТАРЫЕ ТОВАРЫ (обновлены)
+  # ========================
+
+  # Товар: Топовый алмазный меч (выдаётся через ShopRewardService)
+  diamond_sword:
+    display-name: "<gradient:#FF6B6B:#EE5A24>✦ Клинок Чемпиона</gradient>"
+    material: DIAMOND_SWORD
+    price-level: 5
+    required-level: 3
+    reward-type: TOP_SWORD
+    lore:
+      - "<gray>Легендарный меч для настоящего бойца</gray>"
+      - ""
+      - "<gold>✦ Острота V</gold>"
+      - "<gold>✦ Добыча III</gold>"
+      - "<gold>✦ Починка</gold>"
+      - "<gold>✦ Разящий клинок III</gold>"
+    commands: []
+
+  # Товар: Набор жемчуга Края (16 шт)
+  ender_pearls:
+    display-name: "<gradient:#9B59B6:#8E44AD>✦ Жемчуг Края x16</gradient>"
+    material: ENDER_PEARL
+    price-level: 3
+    required-level: 2
+    lore:
+      - "<gray>Телепортируйся куда угодно!</gray>"
+    commands:
+      - "/minecraft:give %player% minecraft:ender_pearl 16"
+
+  # Товар: Книга чар "Починка"
+  mending_book:
+    display-name: "<gradient:#2ECC71:#27AE60>✦ Книга Починки</gradient>"
+    material: ENCHANTED_BOOK
+    price-level: 10
+    required-level: 7
+    lore:
+      - "<gray>Вечная прочность на твоих инструментах</gray>"
+    commands:
+      - "/minecraft:give %player% minecraft:enchanted_book[enchantments={mending:1}] 1"
+

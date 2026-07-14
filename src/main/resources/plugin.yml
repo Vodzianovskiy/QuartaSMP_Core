@@ -1,0 +1,31 @@
+name: QuartaSMP_Core
+version: '${version}'
+main: eu._Nightwarden.quartaSMP_Core.QuartaSMP_Core
+api-version: '1.21'
+load: POSTWORLD
+softdepend:
+  - PlaceholderAPI
+author: _Nightwarden
+description: Core plugin for QuartaSMP - Quests, Levels, Shop
+
+commands:
+  quartasmp:
+    description: Open the main QuartaSMP menu
+    aliases:
+      - qsmp
+      - q
+    usage: /<command>
+    permission: quartasmp.command.use
+
+permissions:
+  quartasmp.command.use:
+    description: Allows using /quartasmp command
+    default: true
+  quartasmp.admin:
+    description: Allows access to all QuartaSMP admin tools (reload, unlockweek, setweek, addexp, admin panel)
+    default: op
+    children:
+      quartasmp.admin.reload: true
+  quartasmp.admin.reload:
+    description: Allows reloading plugin configuration
+    default: op

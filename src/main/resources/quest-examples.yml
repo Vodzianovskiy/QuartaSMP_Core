@@ -1,0 +1,557 @@
+# ============================================================
+# QuartaSMP_Core — ПРИМЕРЫ ВСЕХ ТИПОВ КВЕСТОВ
+# ============================================================
+#
+# Этот файл — шпаргалка. Он НЕ загружается плагином.
+# Просто копируй нужные блоки в quests.yml и меняй значения.
+#
+# ============================================================
+# СТРУКТУРА НЕДЕЛИ:
+# ============================================================
+# weeks:
+#   week_НАЗВАНИЕ:
+#     display-name: <gradient:#HEX1:#HEX2>Название недели</gradient>
+#     quest-points: ЧИСЛО          # очки за прохождение всей недели
+#     rewards:                      # награды за ВСЮ неделю
+#       reward_1:
+#         material: МАТЕРИАЛ
+#         amount: ЧИСЛО
+#       reward_2: ...               # можно много наград
+#     tasks:                        # список заданий
+#       task_УНИКАЛЬНЫЙ_ID:
+#         type: ТИП_ЗАДАЧИ
+#         display-name: <gradient:...>Название</gradient>
+#         material: МАТЕРИАЛ_ИКОНКИ
+#         target-amount: ЧИСЛО
+#         ...остальные поля...
+#         reward-exp: ЧИСЛО         # опыт за задание
+#         rewards:                  # награды за задание (опционально)
+#           reward_1:
+#             material: МАТЕРИАЛ
+#             amount: ЧИСЛО
+#
+# ============================================================
+# ВСЕ ДОСТУПНЫЕ ТИПЫ ЗАДАЧ (17 штук)
+# ============================================================
+
+# ============================================================
+# 1. DELIVER — СДАТЬ ПРЕДМЕТЫ
+# Игрок должен принести N предметов и нажать кнопку сдачи.
+# Предметы ЗАБИРАЮТСЯ из инвентаря.
+# ============================================================
+# Поля: type, display-name, material, target-amount, item-material
+# Опционально: reward-exp, rewards
+example_deliver:
+  type: DELIVER
+  display-name: <gradient:#FFD700:#FFA500>Сдать ресурсы</gradient>
+  material: DIAMOND              # иконка в меню
+  target-amount: 32              # сколько штук нужно сдать
+  item-material: DIAMOND         # какой предмет сдаём
+  reward-exp: 50                 # опыт за выполнение
+  rewards:
+    reward_1:
+      material: GOLD_INGOT
+      amount: 5
+
+# ============================================================
+# 2. HAVE_IN_INVENTORY — ИМЕТЬ В ИНВЕНТАРЕ
+# Игрок должен иметь N предметов в инвентаре.
+# Предметы НЕ ЗАБИРАЮТСЯ.
+# ============================================================
+# Поля: type, display-name, material, target-amount, item-material
+# Опционально: reward-exp, rewards
+example_have:
+  type: HAVE_IN_INVENTORY
+  display-name: <gradient:#00FF00:#32CD32>Иметь запасы</gradient>
+  material: EMERALD
+  target-amount: 16
+  item-material: EMERALD
+  reward-exp: 30
+
+# ============================================================
+# 3. CRAFT — СКРАФТИТЬ
+# Игрок должен скрафтить N предметов (в верстаке/инвентаре).
+# ============================================================
+# Поля: type, display-name, material, target-amount, craft-material
+# Опционально: reward-exp, rewards
+example_craft:
+  type: CRAFT
+  display-name: <gradient:#FF8C00:#FF4500>Скрафтить кирки</gradient>
+  material: DIAMOND_PICKAXE
+  target-amount: 5
+  craft-material: DIAMOND_PICKAXE   # что именно крафтим
+  reward-exp: 40
+  rewards:
+    reward_1:
+      material: DIAMOND
+      amount: 2
+
+# ============================================================
+# 4. KILL — УБИТЬ МОБОВ
+# Игрок должен убить N мобов определённого типа.
+# ============================================================
+# Поля: type, display-name, material, target-amount, entity-type
+# Опционально: reward-exp, rewards
+#
+# СПИСОК entity-type (основные):
+#   ZOMBIE, SKELETON, CREEPER, SPIDER, ENDERMAN,
+#   BLAZE, WITHER_SKELETON, PIGLIN, HOGLIN, ZOMBIFIED_PIGLIN,
+#   WITCH, VINDICATOR, EVOKER, RAVAGER, PILLAGER,
+#   DROWNED, HUSK, STRAY, PHANTOM, SLIME, MAGMA_CUBE,
+#   GHAST, GUARDIAN, ELDER_GUARDIAN, SHULKER,
+#   CAVE_SPIDER, SILVERFISH, ENDERMITE,
+#   COW, PIG, SHEEP, CHICKEN, RABBIT,
+#   WOLF, CAT, HORSE, FOX, BEE, DOLPHIN, TURTLE,
+#   IRON_GOLEM, SNOW_GOLEM, VILLAGER,
+#   ENDER_DRAGON, WITHER
+# ============================================================
+example_kill_zombie:
+  type: KILL
+  display-name: <gradient:#FF0000:#8B0000>Убить зомби</gradient>
+  material: ROTTEN_FLESH
+  target-amount: 20
+  entity-type: ZOMBIE               # кого убиваем
+  reward-exp: 25
+  rewards:
+    reward_1:
+      material: IRON_INGOT
+      amount: 3
+
+example_kill_wither:
+  type: KILL
+  display-name: <gradient:#2F2F2F:#FF0000>Убить Визера</gradient>
+  material: NETHER_STAR
+  target-amount: 1
+  entity-type: WITHER
+  reward-exp: 150
+  rewards:
+    reward_1:
+      material: NETHER_STAR
+      amount: 1
+
+# ============================================================
+# 5. BLOCK_BREAK — СЛОМАТЬ БЛОКИ
+# Игрок должен сломать N блоков определённого типа.
+# ============================================================
+# Поля: type, display-name, material, target-amount, block-material
+# Опционально: reward-exp, rewards
+example_break_stone:
+  type: BLOCK_BREAK
+  display-name: <gradient:#808080:#C0C0C0>Сломать камень</gradient>
+  material: STONE_PICKAXE
+  target-amount: 128
+  block-material: STONE              # какой блок ломаем
+  reward-exp: 30
+  rewards:
+    reward_1:
+      material: COBBLESTONE
+      amount: 64
+
+# ============================================================
+# 6. BLOCK_PLACE — ПОСТАВИТЬ БЛОКИ
+# Игрок должен поставить N блоков определённого типа.
+# ============================================================
+# Поля: type, display-name, material, target-amount, block-material
+# Опционально: reward-exp, rewards
+example_place_torch:
+  type: BLOCK_PLACE
+  display-name: <gradient:#FFD700:#FFA500>Поставить факелы</gradient>
+  material: TORCH
+  target-amount: 64
+  block-material: TORCH              # какой блок ставим
+  reward-exp: 15
+  rewards:
+    reward_1:
+      material: LANTERN
+      amount: 8
+
+# ============================================================
+# 7. ENCHANT — ЗАЧАРОВАТЬ
+# Игрок должен зачаровать предмет N раз (на столе зачарования).
+# ============================================================
+# Поля: type, display-name, material, target-amount
+# Опционально: reward-exp, rewards
+example_enchant:
+  type: ENCHANT
+  display-name: <gradient:#00FFFF:#9370DB>Зачаровать предметы</gradient>
+  material: ENCHANTED_BOOK
+  target-amount: 10
+  reward-exp: 50
+  rewards:
+    reward_1:
+      material: EXPERIENCE_BOTTLE
+      amount: 16
+
+# ============================================================
+# 8. FISH — ПОЙМАТЬ РЫБУ
+# Игрок должен поймать N рыб (любых).
+# ============================================================
+# Поля: type, display-name, material, target-amount
+# Опционально: reward-exp, rewards
+example_fish:
+  type: FISH
+  display-name: <gradient:#00CED1:#4682B4>Поймать рыбу</gradient>
+  material: FISHING_ROD
+  target-amount: 20
+  reward-exp: 30
+  rewards:
+    reward_1:
+      material: COD
+      amount: 16
+
+# ============================================================
+# 9. BREW — СВАРИТЬ ЗЕЛЬЯ
+# Игрок должен сварить N зелий (любых).
+# ВАЖНО: BREW считает ЛЮБЫЕ сваренные зелья.
+# Если хочешь конкретный эффект — используй CONSUME_POTION.
+# ============================================================
+# Поля: type, display-name, material, target-amount
+# Опционально: reward-exp, rewards
+example_brew_any:
+  type: BREW
+  display-name: <gradient:#9932CC:#BA55D3>Сварить зелья</gradient>
+  material: BREWING_STAND
+  target-amount: 10
+  reward-exp: 40
+  rewards:
+    reward_1:
+      material: BLAZE_POWDER
+      amount: 8
+
+# ============================================================
+# 10. EAT — СЪЕСТЬ
+# Игрок должен съесть N штук определённой еды.
+# ============================================================
+# Поля: type, display-name, material, target-amount, item-material
+# Опционально: reward-exp, rewards
+example_eat_beef:
+  type: EAT
+  display-name: <gradient:#FF6347:#8B0000>Съесть стейки</gradient>
+  material: COOKED_BEEF
+  target-amount: 32
+  item-material: COOKED_BEEF         # что именно едим
+  reward-exp: 20
+  rewards:
+    reward_1:
+      material: GOLDEN_APPLE
+      amount: 2
+
+# ============================================================
+# 11. TAME — ПРИРУЧИТЬ
+# Игрок должен приручить N животных определённого типа.
+# ============================================================
+# Поля: type, display-name, material, target-amount, entity-type
+# Опционально: reward-exp, rewards
+example_tame_wolf:
+  type: TAME
+  display-name: <gradient:#FFFF00:#FFD700>Приручить волков</gradient>
+  material: BONE
+  target-amount: 3
+  entity-type: WOLF                  # кого приручаем
+  reward-exp: 35
+  rewards:
+    reward_1:
+      material: BONE
+      amount: 16
+
+# ============================================================
+# 12. SMELT — ПЕРЕПЛАВИТЬ В ПЕЧИ
+# Игрок должен переплавить N предметов в печи.
+# ============================================================
+# Поля: type, display-name, material, target-amount, item-material
+# Опционально: reward-exp, rewards
+example_smelt_iron:
+  type: SMELT
+  display-name: <gradient:#FF8C00:#FF6347>Переплавить железо</gradient>
+  material: IRON_INGOT
+  target-amount: 32
+  item-material: IRON_INGOT          # что получается на выходе
+  reward-exp: 30
+  rewards:
+    reward_1:
+      material: BLAST_FURNACE
+      amount: 1
+
+# ============================================================
+# 13. BUCKET_FILL — НАПОЛНИТЬ ВЕДРО
+# Игрок должен наполнить N вёдер (водой, лавой и т.д.).
+# ============================================================
+# Поля: type, display-name, material, target-amount, item-material
+# Опционально: reward-exp, rewards
+example_bucket_water:
+  type: BUCKET_FILL
+  display-name: <gradient:#00BFFF:#4682B4>Наполнить вёдра воды</gradient>
+  material: WATER_BUCKET
+  target-amount: 10
+  item-material: WATER_BUCKET        # чем наполняем
+  reward-exp: 15
+
+example_bucket_lava:
+  type: BUCKET_FILL
+  display-name: <gradient:#FF4500:#FF0000>Наполнить вёдра лавы</gradient>
+  material: LAVA_BUCKET
+  target-amount: 5
+  item-material: LAVA_BUCKET
+  reward-exp: 25
+
+# ============================================================
+# 14. SHEAR — ОСТРИЧЬ ОВЕЦ
+# Игрок должен остричь N овец (любого цвета).
+# ============================================================
+# Поля: type, display-name, material, target-amount
+# Опционально: reward-exp, rewards
+example_shear:
+  type: SHEAR
+  display-name: <gradient:#FFFFFF:#E0E0E0>Остричь овец</gradient>
+  material: SHEARS
+  target-amount: 15
+  reward-exp: 20
+  rewards:
+    reward_1:
+      material: WHITE_WOOL
+      amount: 32
+
+# ============================================================
+# 15. TRADE — ТОРГОВАТЬ С ЖИТЕЛЯМИ
+# Игрок должен сделать N сделок с жителями.
+# ============================================================
+# Поля: type, display-name, material, target-amount
+# Опционально: reward-exp, rewards
+example_trade:
+  type: TRADE
+  display-name: <gradient:#32CD32:#FFD700>Торговля с жителями</gradient>
+  material: EMERALD
+  target-amount: 30
+  reward-exp: 45
+  rewards:
+    reward_1:
+      material: EMERALD
+      amount: 8
+
+# ============================================================
+# 16. BREED — РАЗМНОЖИТЬ ЖИВОТНЫХ
+# Игрок должен размножить N животных определённого типа.
+# ============================================================
+# Поля: type, display-name, material, target-amount, entity-type
+# Опционально: reward-exp, rewards
+example_breed_cow:
+  type: BREED
+  display-name: <gradient:#DEB887:#D2B48C>Размножить коров</gradient>
+  material: WHEAT
+  target-amount: 10
+  entity-type: COW                   # кого размножаем
+  reward-exp: 25
+  rewards:
+    reward_1:
+      material: LEATHER
+      amount: 8
+
+# ============================================================
+# 17. CONSUME_POTION — ВЫПИТЬ ЗЕЛЬЕ С ЭФФЕКТОМ
+# Игрок должен выпить N зелий с определённым эффектом.
+#
+# СПИСОК potion-effect (основные):
+#   SPEED           — скорость
+#   SLOWNESS        — замедление
+#   HASTE           — спешка
+#   STRENGTH        — сила
+#   HEAL            — мгновенное лечение
+#   HARM            — мгновенный урон
+#   JUMP_BOOST      — прыгучесть
+#   REGENERATION    — регенерация
+#   FIRE_RESISTANCE — огнестойкость
+#   WATER_BREATHING — подводное дыхание
+#   INVISIBILITY    — невидимость
+#   NIGHT_VISION    — ночное зрение
+#   WEAKNESS        — слабость
+#   POISON          — отравление
+#   WITHER          — иссушение
+#   LUCK            — удача
+#   SLOW_FALLING    — медленное падение
+#   DOLPHINS_GRACE  — грация дельфина
+# ============================================================
+# Поля: type, display-name, material, target-amount, potion-effect
+# Опционально: reward-exp, rewards
+
+# Пример: выпить зелья скорости
+example_consume_speed:
+  type: CONSUME_POTION
+  display-name: <gradient:#00BFFF:#87CEEB>Выпить скорость</gradient>
+  material: POTION
+  target-amount: 5
+  potion-effect: SPEED               # какой эффект должен быть у зелья
+  reward-exp: 25
+  rewards:
+    reward_1:
+      material: SUGAR
+      amount: 16
+
+# Пример: выпить зелья силы
+example_consume_strength:
+  type: CONSUME_POTION
+  display-name: <gradient:#FF4500:#DC143C>Выпить силу</gradient>
+  material: POTION
+  target-amount: 5
+  potion-effect: STRENGTH
+  reward-exp: 30
+  rewards:
+    reward_1:
+      material: BLAZE_POWDER
+      amount: 4
+
+# Пример: выпить зелья регенерации
+example_consume_regen:
+  type: CONSUME_POTION
+  display-name: <gradient:#FF69B4:#FF1493>Выпить регенерацию</gradient>
+  material: POTION
+  target-amount: 3
+  potion-effect: REGENERATION
+  reward-exp: 35
+  rewards:
+    reward_1:
+      material: GHAST_TEAR
+      amount: 2
+
+# Пример: выпить зелья огнестойкости
+example_consume_fire_resist:
+  type: CONSUME_POTION
+  display-name: <gradient:#FF4500:#FF8C00>Огнестойкость</gradient>
+  material: POTION
+  target-amount: 3
+  potion-effect: FIRE_RESISTANCE
+  reward-exp: 25
+  rewards:
+    reward_1:
+      material: MAGMA_CREAM
+      amount: 4
+
+# Пример: выпить зелья невидимости
+example_consume_invis:
+  type: CONSUME_POTION
+  display-name: <gradient:#9932CC:#8B008B>Невидимость</gradient>
+  material: POTION
+  target-amount: 3
+  potion-effect: INVISIBILITY
+  reward-exp: 40
+  rewards:
+    reward_1:
+      material: GOLDEN_CARROT
+      amount: 4
+
+# Пример: выпить зелья прыгучести
+example_consume_jump:
+  type: CONSUME_POTION
+  display-name: <gradient:#00FF00:#32CD32>Прыгучесть</gradient>
+  material: POTION
+  target-amount: 5
+  potion-effect: JUMP_BOOST
+  reward-exp: 20
+  rewards:
+    reward_1:
+      material: RABBIT_FOOT
+      amount: 2
+
+# Пример: выпить зелья ночного зрения
+example_consume_night_vision:
+  type: CONSUME_POTION
+  display-name: <gradient:#00CED1:#1E90FF>Ночное зрение</gradient>
+  material: POTION
+  target-amount: 5
+  potion-effect: NIGHT_VISION
+  reward-exp: 20
+  rewards:
+    reward_1:
+      material: GOLDEN_CARROT
+      amount: 2
+
+# Пример: выпить зелья подводного дыхания
+example_consume_water_breath:
+  type: CONSUME_POTION
+  display-name: <gradient:#00BFFF:#4682B4>Подводное дыхание</gradient>
+  material: POTION
+  target-amount: 3
+  potion-effect: WATER_BREATHING
+  reward-exp: 25
+  rewards:
+    reward_1:
+      material: PUFFERFISH
+      amount: 2
+
+# Пример: выпить зелья медленного падения
+example_consume_slow_fall:
+  type: CONSUME_POTION
+  display-name: <gradient:#FFFFFF:#D3D3D3>Медленное падение</gradient>
+  material: POTION
+  target-amount: 3
+  potion-effect: SLOW_FALLING
+  reward-exp: 25
+  rewards:
+    reward_1:
+      material: PHANTOM_MEMBRANE
+      amount: 2
+
+# ============================================================
+# ПРИМЕР ПОЛНОЙ НЕДЕЛИ (собираем всё вместе)
+# ============================================================
+# weeks:
+#   week_example:
+#     display-name: <gradient:#FF6B6B:#4ECDC4>✦ Пример недели</gradient>
+#     quest-points: 50
+#     rewards:
+#       reward_1:
+#         material: DIAMOND
+#         amount: 5
+#       reward_2:
+#         material: EMERALD
+#         amount: 32
+#     tasks:
+#       task_kill_zombies:
+#         type: KILL
+#         display-name: <gradient:#FF0000:#8B0000>Охота на зомби</gradient>
+#         material: ROTTEN_FLESH
+#         target-amount: 20
+#         entity-type: ZOMBIE
+#         reward-exp: 30
+#         rewards:
+#           reward_1:
+#             material: IRON_INGOT
+#             amount: 5
+#       task_fish_cod:
+#         type: FISH
+#         display-name: <gradient:#00CED1:#4682B4>Рыбалка</gradient>
+#         material: FISHING_ROD
+#         target-amount: 15
+#         reward-exp: 25
+#         rewards:
+#           reward_1:
+#             material: COOKED_COD
+#             amount: 16
+#       task_brew_healing:
+#         type: CONSUME_POTION
+#         display-name: <gradient:#FF69B4:#FF1493>Зелье лечения</gradient>
+#         material: POTION
+#         target-amount: 3
+#         potion-effect: HEAL
+#         reward-exp: 30
+#         rewards:
+#           reward_1:
+#             material: GLISTERING_MELON_SLICE
+#             amount: 4
+#       task_craft_pickaxe:
+#         type: CRAFT
+#         display-name: <gradient:#D3D3D3:#C0C0C0>Кирки</gradient>
+#         material: IRON_PICKAXE
+#         target-amount: 3
+#         craft-material: IRON_PICKAXE
+#         reward-exp: 20
+#       task_deliver_diamond:
+#         type: DELIVER
+#         display-name: <gradient:#00FFFF:#00CED1>Сдать алмазы</gradient>
+#         material: DIAMOND
+#         target-amount: 8
+#         item-material: DIAMOND
+#         reward-exp: 40
+#         rewards:
+#           reward_1:
+#             material: DIAMOND_BLOCK
+#             amount: 1

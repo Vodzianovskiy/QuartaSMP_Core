@@ -1,0 +1,3444 @@
+# ============================================================
+# QuartaSMP_Core — Квесты (12 недель x 28 = 336 квестов)
+# Версия 1.21.11 | Каждая неделя: от лёгких к сложным
+# Награды: опыт + ресурсы | За неделю: тематический предмет
+# ============================================================
+
+weeks:
+  # ═══════════════════════════════════════════════════════════
+  # W1 — Фермер (★☆☆) 15qp | Незеритовая мотыга Unb3 Eff5 Fort3
+  # ═══════════════════════════════════════════════════════════
+  week_1:
+    display-name: "<gradient:#90EE90:#228B22>✦ Неделя 1 — Фермер</gradient>"
+    quest-points: 15
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:netherite_hoe[enchantments={unbreaking:3,efficiency:5,fortune:3},item_name=''{"bold":true,"color":"gold","text":"Мотыга Фермера"}'' 1'
+    tasks:
+      task_w1_01:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#7CFC00:#228B22>Пшеничные поля</gradient>"
+        material: WHEAT_SEEDS
+        target-amount: 64
+        block-material: WHEAT
+        reward-exp: 10
+        rewards:
+          reward_1:
+            material: BONE_MEAL
+            amount: 16
+      task_w1_02:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFD700:#DAA520>Сбор пшеницы</gradient>"
+        material: WHEAT
+        target-amount: 64
+        block-material: WHEAT
+        reward-exp: 10
+        rewards:
+          reward_1:
+            material: BREAD
+            amount: 32
+      task_w1_03:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#FF8C00:#FFA500>Морковная грядка</gradient>"
+        material: CARROT
+        target-amount: 48
+        block-material: CARROTS
+        reward-exp: 10
+        rewards:
+          reward_1:
+            material: GOLDEN_CARROT
+            amount: 8
+      task_w1_04:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#D2691E:#8B4513>Картофельный ряд</gradient>"
+        material: POTATO
+        target-amount: 48
+        block-material: POTATOES
+        reward-exp: 10
+        rewards:
+          reward_1:
+            material: BAKED_POTATO
+            amount: 32
+      task_w1_05:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#8B4513:#654321>Плодородная земля</gradient>"
+        material: DIRT
+        target-amount: 128
+        block-material: DIRT
+        reward-exp: 10
+      task_w1_06:
+        type: EAT
+        display-name: "<gradient:#FF0000:#8B0000>Витамины</gradient>"
+        material: APPLE
+        target-amount: 16
+        item-material: APPLE
+        reward-exp: 10
+        rewards:
+          reward_1:
+            material: GOLDEN_APPLE
+            amount: 2
+      task_w1_07:
+        type: EAT
+        display-name: "<gradient:#F5DEB3:#DEB887>Хлебный обед</gradient>"
+        material: BREAD
+        target-amount: 24
+        item-material: BREAD
+        reward-exp: 15
+      task_w1_08:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FF1493:#C71585>Свекольный урожай</gradient>"
+        material: BEETROOT
+        target-amount: 32
+        block-material: BEETROOTS
+        reward-exp: 10
+        rewards:
+          reward_1:
+            material: BEETROOT_SOUP
+            amount: 8
+      task_w1_09:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFA500:#FF6347>Тыквенная бахча</gradient>"
+        material: PUMPKIN
+        target-amount: 48
+        block-material: PUMPKIN
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: PUMPKIN_PIE
+            amount: 16
+      task_w1_10:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#32CD32:#006400>Арбузный сбор</gradient>"
+        material: MELON
+        target-amount: 48
+        block-material: MELON
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: MELON_SLICE
+            amount: 64
+      task_w1_11:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#00FF7F:#2E8B57>Тростниковый сбор</gradient>"
+        material: SUGAR_CANE
+        target-amount: 64
+        block-material: SUGAR_CANE
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: SUGAR
+            amount: 32
+      task_w1_12:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#006400:#228B22>Кактусовая плантация</gradient>"
+        material: CACTUS
+        target-amount: 32
+        block-material: CACTUS
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: GREEN_DYE
+            amount: 16
+      task_w1_13:
+        type: SHEAR
+        display-name: "<gradient:#FFFFFF:#E0E0E0>Стрижка овец</gradient>"
+        material: SHEARS
+        target-amount: 15
+        reward-exp: 10
+        rewards:
+          reward_1:
+            material: WHITE_WOOL
+            amount: 32
+      task_w1_14:
+        type: KILL
+        display-name: "<gradient:#F5DEB3:#8B4513>Скотный двор</gradient>"
+        material: COOKED_BEEF
+        target-amount: 15
+        entity-type: COW
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: LEATHER
+            amount: 16
+      task_w1_15:
+        type: KILL
+        display-name: "<gradient:#FF6347:#FF4500>Птичник</gradient>"
+        material: COOKED_CHICKEN
+        target-amount: 15
+        entity-type: CHICKEN
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: FEATHER
+            amount: 32
+      task_w1_16:
+        type: BREED
+        display-name: "<gradient:#DEB887:#D2B48C>Разведение коров</gradient>"
+        material: WHEAT
+        target-amount: 8
+        entity-type: COW
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: LEATHER
+            amount: 8
+      task_w1_17:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FF69B4:#FF1493>Цветочная поляна</gradient>"
+        material: DANDELION
+        target-amount: 32
+        block-material: DANDELION
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: YELLOW_DYE
+            amount: 16
+      task_w1_18:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#8B4513:#A0522D>Лесоруб</gradient>"
+        material: OAK_LOG
+        target-amount: 64
+        block-material: OAK_LOG
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: OAK_SAPLING
+            amount: 16
+      task_w1_19:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#228B22:#006400>Лесопосадка</gradient>"
+        material: OAK_SAPLING
+        target-amount: 32
+        block-material: OAK_SAPLING
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: BONE_MEAL
+            amount: 8
+      task_w1_20:
+        type: CRAFT
+        display-name: "<gradient:#FFFFFF:#D3D3D3>Костная мука</gradient>"
+        material: BONE_MEAL
+        target-amount: 32
+        craft-material: BONE_MEAL
+        reward-exp: 15
+      task_w1_21:
+        type: CRAFT
+        display-name: "<gradient:#8B4513:#654321>Компостер</gradient>"
+        material: COMPOSTER
+        target-amount: 4
+        craft-material: COMPOSTER
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: BONE_MEAL
+            amount: 16
+      task_w1_22:
+        type: DELIVER
+        display-name: "<gradient:#F5F5DC:#FFF8DC>Сдать удобрения</gradient>"
+        material: BONE_MEAL
+        target-amount: 64
+        item-material: BONE_MEAL
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: COMPOSTER
+            amount: 2
+      task_w1_23:
+        type: DELIVER
+        display-name: "<gradient:#FFD700:#DAA520>Сдать пшеницу</gradient>"
+        material: WHEAT
+        target-amount: 64
+        item-material: WHEAT
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: HAY_BLOCK
+            amount: 16
+      task_w1_24:
+        type: CRAFT
+        display-name: "<gradient:#FFD700:#FFA500>Тюки сена</gradient>"
+        material: HAY_BLOCK
+        target-amount: 16
+        craft-material: HAY_BLOCK
+        reward-exp: 20
+      task_w1_25:
+        type: SHEAR
+        display-name: "<gradient:#FFD700:#FFA500>Массовая стрижка</gradient>"
+        material: SHEARS
+        target-amount: 25
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: WHITE_WOOL
+            amount: 64
+      task_w1_26:
+        type: EAT
+        display-name: "<gradient:#FF6347:#8B0000>Мясной запас</gradient>"
+        material: COOKED_BEEF
+        target-amount: 48
+        item-material: COOKED_BEEF
+        reward-exp: 25
+      task_w1_27:
+        type: DELIVER
+        display-name: "<gradient:#2E8B57:#00FF7F>Сдать тростник</gradient>"
+        material: SUGAR_CANE
+        target-amount: 128
+        item-material: SUGAR_CANE
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: SUGAR
+            amount: 64
+      task_w1_28:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FF8C00:#228B22>Овощной запас</gradient>"
+        material: CARROT
+        target-amount: 64
+        item-material: CARROT
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: GOLDEN_CARROT
+            amount: 16
+
+  # ═══════════════════════════════════════════════════════════
+  # W2 — Шахтёр (★★☆) 20qp | Незеритовая кирка Unb3 Eff5 Fort3
+  # ═══════════════════════════════════════════════════════════
+  week_2:
+    display-name: "<gradient:#808080:#D3D3D3>◆ Неделя 2 — Шахтёр</gradient>"
+    quest-points: 20
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:netherite_pickaxe[enchantments={unbreaking:3,efficiency:5,fortune:3},item_name=''{"bold":true,"color":"gold","text":"Кирка Шахтёра"}'' 1'
+    tasks:
+      task_w2_01:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#808080:#696969>Добыча камня</gradient>"
+        material: STONE_PICKAXE
+        target-amount: 128
+        block-material: STONE
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: COBBLESTONE
+            amount: 64
+      task_w2_02:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#36454F:#1a1a1a>Угольный забой</gradient>"
+        material: COAL_ORE
+        target-amount: 64
+        block-material: COAL_ORE
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: TORCH
+            amount: 64
+      task_w2_03:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#FFD700:#FFA500>Освещение шахты</gradient>"
+        material: TORCH
+        target-amount: 64
+        block-material: TORCH
+        reward-exp: 15
+        rewards:
+          reward_1:
+            material: LANTERN
+            amount: 16
+      task_w2_04:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#D3D3D3:#C0C0C0>Железная руда</gradient>"
+        material: IRON_ORE
+        target-amount: 48
+        block-material: IRON_ORE
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: IRON_INGOT
+            amount: 6
+      task_w2_05:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#D2691E:#FF8C00>Медная руда</gradient>"
+        material: COPPER_ORE
+        target-amount: 48
+        block-material: COPPER_ORE
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: COPPER_INGOT
+            amount: 12
+      task_w2_06:
+        type: SMELT
+        display-name: "<gradient:#FF8C00:#FF6347>Плавка железа</gradient>"
+        material: IRON_INGOT
+        target-amount: 32
+        item-material: IRON_INGOT
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: BLAST_FURNACE
+            amount: 1
+      task_w2_07:
+        type: CRAFT
+        display-name: "<gradient:#808080:#A9A9A9>Каменные кирки</gradient>"
+        material: STONE_PICKAXE
+        target-amount: 6
+        craft-material: STONE_PICKAXE
+        reward-exp: 15
+      task_w2_08:
+        type: CRAFT
+        display-name: "<gradient:#D3D3D3:#C0C0C0>Железные кирки</gradient>"
+        material: IRON_PICKAXE
+        target-amount: 4
+        craft-material: IRON_PICKAXE
+        reward-exp: 20
+      task_w2_09:
+        type: DELIVER
+        display-name: "<gradient:#696969:#808080>Булыжный склад</gradient>"
+        material: COBBLESTONE
+        target-amount: 256
+        item-material: COBBLESTONE
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: STONE
+            amount: 128
+      task_w2_10:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFD700:#DAA520>Золотая жила</gradient>"
+        material: GOLD_ORE
+        target-amount: 32
+        block-material: GOLD_ORE
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: GOLD_INGOT
+            amount: 4
+      task_w2_11:
+        type: SMELT
+        display-name: "<gradient:#FFD700:#FFA500>Плавка золота</gradient>"
+        material: GOLD_INGOT
+        target-amount: 32
+        item-material: GOLD_INGOT
+        reward-exp: 25
+      task_w2_12:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#0000FF:#4169E1>Лазуритовая жила</gradient>"
+        material: LAPIS_ORE
+        target-amount: 32
+        block-material: LAPIS_ORE
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: LAPIS_LAZULI
+            amount: 32
+      task_w2_13:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FF0000:#8B0000>Редстоуновая пыль</gradient>"
+        material: REDSTONE_ORE
+        target-amount: 64
+        block-material: REDSTONE_ORE
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: REDSTONE
+            amount: 64
+      task_w2_14:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#2F4F4F:#1C1C1C>Глубинный сланец</gradient>"
+        material: DEEPSLATE
+        target-amount: 128
+        block-material: DEEPSLATE
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: DEEPSLATE_BRICKS
+            amount: 64
+      task_w2_15:
+        type: CRAFT
+        display-name: "<gradient:#FFD700:#B8860B>Железная дорога</gradient>"
+        material: RAIL
+        target-amount: 128
+        craft-material: RAIL
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: POWERED_RAIL
+            amount: 16
+      task_w2_16:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#00FFFF:#00CED1>Алмазный прииск</gradient>"
+        material: DIAMOND_ORE
+        target-amount: 16
+        block-material: DIAMOND_ORE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: DIAMOND
+            amount: 2
+      task_w2_17:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#F5DEB3:#DEB887>Песчаный карьер</gradient>"
+        material: SAND
+        target-amount: 128
+        block-material: SAND
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: GLASS
+            amount: 64
+      task_w2_18:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#B0B0B0:#808080>Гравийный карьер</gradient>"
+        material: GRAVEL
+        target-amount: 128
+        block-material: GRAVEL
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: FLINT
+            amount: 32
+      task_w2_19:
+        type: CRAFT
+        display-name: "<gradient:#808080:#696969>Печных дел мастер</gradient>"
+        material: FURNACE
+        target-amount: 8
+        craft-material: FURNACE
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: COAL
+            amount: 32
+      task_w2_20:
+        type: KILL
+        display-name: "<gradient:#0000FF:#000080>Пещерная опасность</gradient>"
+        material: STRING
+        target-amount: 10
+        entity-type: CAVE_SPIDER
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: STRING
+            amount: 16
+      task_w2_21:
+        type: SMELT
+        display-name: "<gradient:#808080:#A9A9A9>Обжиг камня</gradient>"
+        material: STONE
+        target-amount: 128
+        item-material: STONE
+        reward-exp: 30
+      task_w2_22:
+        type: CRAFT
+        display-name: "<gradient:#A9A9A9:#D3D3D3>Каменные кирпичи</gradient>"
+        material: STONE_BRICKS
+        target-amount: 128
+        craft-material: STONE_BRICKS
+        reward-exp: 30
+      task_w2_23:
+        type: SMELT
+        display-name: "<gradient:#87CEEB:#B0C4DE>Плавка стекла</gradient>"
+        material: GLASS
+        target-amount: 128
+        item-material: GLASS
+        reward-exp: 30
+      task_w2_24:
+        type: DELIVER
+        display-name: "<gradient:#FFD700:#DAA520>Золотой запас</gradient>"
+        material: RAW_GOLD
+        target-amount: 64
+        item-material: RAW_GOLD
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: GOLD_INGOT
+            amount: 8
+      task_w2_25:
+        type: DELIVER
+        display-name: "<gradient:#C0C0C0:#D3D3D3>Железный запас</gradient>"
+        material: RAW_IRON
+        target-amount: 128
+        item-material: RAW_IRON
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: IRON_INGOT
+            amount: 16
+      task_w2_26:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#00FFFF:#00CED1>Алмазный капитал</gradient>"
+        material: DIAMOND
+        target-amount: 16
+        item-material: DIAMOND
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: DIAMOND
+            amount: 3
+      task_w2_27:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FF0000:#8B0000>Редстоун-инженер</gradient>"
+        material: REDSTONE_BLOCK
+        target-amount: 16
+        item-material: REDSTONE
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: REDSTONE_BLOCK
+            amount: 4
+      task_w2_28:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#36454F:#1a1a1a>Угольный магнат</gradient>"
+        material: COAL_BLOCK
+        target-amount: 16
+        item-material: COAL
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: COAL_BLOCK
+            amount: 4
+
+  # ═══════════════════════════════════════════════════════════
+  # W3 — Охотник (★★☆) 25qp | Незеритовый меч Unb3 Sharp5
+  # ═══════════════════════════════════════════════════════════
+  week_3:
+    display-name: "<gradient:#FF4444:#FF8C00>⚔ Неделя 3 — Охотник</gradient>"
+    quest-points: 25
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:netherite_sword[enchantments={unbreaking:3,sharpness:5},item_name=''{"bold":true,"color":"gold","text":"Меч Охотника"}'' 1'
+    tasks:
+      task_w3_01:
+        type: KILL
+        display-name: "<gradient:#4B5320:#556B2F>Истребитель зомби</gradient>"
+        material: ROTTEN_FLESH
+        target-amount: 25
+        entity-type: ZOMBIE
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: ROTTEN_FLESH
+            amount: 32
+      task_w3_02:
+        type: KILL
+        display-name: "<gradient:#E8E8E8:#D3D3D3>Охотник на скелетов</gradient>"
+        material: BONE
+        target-amount: 25
+        entity-type: SKELETON
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: ARROW
+            amount: 64
+      task_w3_03:
+        type: KILL
+        display-name: "<gradient:#8B0000:#FF0000>Паукоубийца</gradient>"
+        material: SPIDER_EYE
+        target-amount: 20
+        entity-type: SPIDER
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: STRING
+            amount: 32
+      task_w3_04:
+        type: CRAFT
+        display-name: "<gradient:#D3D3D3:#A9A9A9>Кузнец-оружейник</gradient>"
+        material: IRON_SWORD
+        target-amount: 4
+        craft-material: IRON_SWORD
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: IRON_INGOT
+            amount: 4
+      task_w3_05:
+        type: CRAFT
+        display-name: "<gradient:#D3D3D3:#C0C0C0>Бронный мастер</gradient>"
+        material: IRON_CHESTPLATE
+        target-amount: 2
+        craft-material: IRON_CHESTPLATE
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: IRON_INGOT
+            amount: 8
+      task_w3_06:
+        type: CRAFT
+        display-name: "<gradient:#8B4513:#D2691E>Стрельник</gradient>"
+        material: ARROW
+        target-amount: 128
+        craft-material: ARROW
+        reward-exp: 20
+      task_w3_07:
+        type: CRAFT
+        display-name: "<gradient:#DEB887:#8B4513>Лучник</gradient>"
+        material: BOW
+        target-amount: 3
+        craft-material: BOW
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: ARROW
+            amount: 32
+      task_w3_08:
+        type: CRAFT
+        display-name: "<gradient:#8B4513:#D2691E>Щитоносец</gradient>"
+        material: SHIELD
+        target-amount: 2
+        craft-material: SHIELD
+        reward-exp: 20
+      task_w3_09:
+        type: DELIVER
+        display-name: "<gradient:#4B5320:#6B8E23>Трофейная гниль</gradient>"
+        material: ROTTEN_FLESH
+        target-amount: 64
+        item-material: ROTTEN_FLESH
+        reward-exp: 25
+      task_w3_10:
+        type: DELIVER
+        display-name: "<gradient:#F5F5DC:#FFF8DC>Костяной сбор</gradient>"
+        material: BONE
+        target-amount: 64
+        item-material: BONE
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: BONE_MEAL
+            amount: 32
+      task_w3_11:
+        type: KILL
+        display-name: "<gradient:#00FF00:#32CD32>Сапёр-ликвидатор</gradient>"
+        material: GUNPOWDER
+        target-amount: 15
+        entity-type: CREEPER
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: TNT
+            amount: 8
+      task_w3_12:
+        type: KILL
+        display-name: "<gradient:#FF00FF:#8B008B>Странник из Края</gradient>"
+        material: ENDER_PEARL
+        target-amount: 10
+        entity-type: ENDERMAN
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: ENDER_PEARL
+            amount: 4
+      task_w3_13:
+        type: KILL
+        display-name: "<gradient:#9932CC:#BA55D3>Охота на ведьм</gradient>"
+        material: GLOWSTONE_DUST
+        target-amount: 8
+        entity-type: WITCH
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: GLOWSTONE_DUST
+            amount: 16
+      task_w3_14:
+        type: DELIVER
+        display-name: "<gradient:#FFFFFF:#F5F5F5>Нитевод</gradient>"
+        material: STRING
+        target-amount: 64
+        item-material: STRING
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: FISHING_ROD
+            amount: 1
+      task_w3_15:
+        type: DELIVER
+        display-name: "<gradient:#808080:#A9A9A9>Пороховой склад</gradient>"
+        material: GUNPOWDER
+        target-amount: 32
+        item-material: GUNPOWDER
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: FIREWORK_ROCKET
+            amount: 16
+      task_w3_16:
+        type: KILL
+        display-name: "<gradient:#7CFC00:#32CD32>Слизневая охота</gradient>"
+        material: SLIME_BALL
+        target-amount: 10
+        entity-type: SLIME
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: SLIME_BALL
+            amount: 16
+      task_w3_17:
+        type: KILL
+        display-name: "<gradient:#4B0082:#9400D3>Ночной фантом</gradient>"
+        material: PHANTOM_MEMBRANE
+        target-amount: 8
+        entity-type: PHANTOM
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: PHANTOM_MEMBRANE
+            amount: 4
+      task_w3_18:
+        type: KILL
+        display-name: "<gradient:#008B8B:#20B2AA>Страж глубин</gradient>"
+        material: PRISMARINE_SHARD
+        target-amount: 10
+        entity-type: GUARDIAN
+        reward-exp: 35
+      task_w3_19:
+        type: KILL
+        display-name: "<gradient:#FFD700:#DAA520>Золотой разбойник</gradient>"
+        material: GOLDEN_SWORD
+        target-amount: 15
+        entity-type: PIGLIN
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: GOLD_NUGGET
+            amount: 32
+      task_w3_20:
+        type: KILL
+        display-name: "<gradient:#8B4513:#A0522D>Кабаний истребитель</gradient>"
+        material: COOKED_PORKCHOP
+        target-amount: 15
+        entity-type: HOGLIN
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: LEATHER
+            amount: 16
+      task_w3_21:
+        type: KILL
+        display-name: "<gradient:#D3D3D3:#808080>Скелетный гринд</gradient>"
+        material: ARROW
+        target-amount: 50
+        entity-type: SKELETON
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: BOW
+            amount: 1
+      task_w3_22:
+        type: KILL
+        display-name: "<gradient:#556B2F:#4B5320>Зомби-ферма</gradient>"
+        material: IRON_INGOT
+        target-amount: 50
+        entity-type: ZOMBIE
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: IRON_INGOT
+            amount: 8
+      task_w3_23:
+        type: KILL
+        display-name: "<gradient:#32CD32:#008000>Слизневый король</gradient>"
+        material: SLIME_BLOCK
+        target-amount: 20
+        entity-type: SLIME
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: SLIME_BLOCK
+            amount: 8
+      task_w3_24:
+        type: KILL
+        display-name: "<gradient:#8B4513:#FF0000>Разоритель</gradient>"
+        material: SADDLE
+        target-amount: 1
+        entity-type: RAVAGER
+        reward-exp: 50
+      task_w3_25:
+        type: KILL
+        display-name: "<gradient:#808080:#FF0000>Заклинатель</gradient>"
+        material: TOTEM_OF_UNDYING
+        target-amount: 1
+        entity-type: EVOKER
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: EMERALD
+            amount: 16
+      task_w3_26:
+        type: KILL
+        display-name: "<gradient:#2F2F2F:#1C1C1C>Черепной охотник</gradient>"
+        material: WITHER_SKELETON_SKULL
+        target-amount: 8
+        entity-type: WITHER_SKELETON
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: COAL
+            amount: 64
+      task_w3_27:
+        type: KILL
+        display-name: "<gradient:#FF8C00:#FF4500>Укротитель пламени</gradient>"
+        material: BLAZE_ROD
+        target-amount: 15
+        entity-type: BLAZE
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 16
+      task_w3_28:
+        type: ENCHANT
+        display-name: "<gradient:#00FFFF:#9370DB>Чары на лук</gradient>"
+        material: BOW
+        target-amount: 3
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 8
+
+  # ═══════════════════════════════════════════════════════════
+  # W4 — Зельевар (★★☆) 30qp | Незеритовый шлем Unb3 Resp3 Aqua
+  # ═══════════════════════════════════════════════════════════
+  week_4:
+    display-name: "<gradient:#9932CC:#FF00FF>⊛ Неделя 4 — Зельевар</gradient>"
+    quest-points: 30
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:netherite_helmet[enchantments={unbreaking:3,respiration:3,aqua_affinity:1},item_name=''{"bold":true,"color":"gold","text":"Шлем Алхимика"}'' 1'
+    tasks:
+      task_w4_01:
+        type: CRAFT
+        display-name: "<gradient:#9932CC:#BA55D3>Варочная стойка</gradient>"
+        material: BREWING_STAND
+        target-amount: 2
+        craft-material: BREWING_STAND
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 8
+      task_w4_02:
+        type: BREW
+        display-name: "<gradient:#FF69B4:#FF1493>Зелья лечения</gradient>"
+        material: POTION
+        target-amount: 8
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: GLISTERING_MELON_SLICE
+            amount: 8
+      task_w4_03:
+        type: BREW
+        display-name: "<gradient:#00BFFF:#87CEEB>Зелья скорости</gradient>"
+        material: POTION
+        target-amount: 8
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: SUGAR
+            amount: 32
+      task_w4_04:
+        type: BREW
+        display-name: "<gradient:#FF4500:#FF6347>Зелья силы</gradient>"
+        material: POTION
+        target-amount: 8
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 8
+      task_w4_05:
+        type: BREW
+        display-name: "<gradient:#FF4500:#FF0000>Зелья огнестойкости</gradient>"
+        material: POTION
+        target-amount: 6
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: MAGMA_CREAM
+            amount: 8
+      task_w4_06:
+        type: CRAFT
+        display-name: "<gradient:#00FFFF:#FF00FF>Стол зачарования</gradient>"
+        material: ENCHANTING_TABLE
+        target-amount: 1
+        craft-material: ENCHANTING_TABLE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: LAPIS_LAZULI
+            amount: 32
+      task_w4_07:
+        type: CRAFT
+        display-name: "<gradient:#F5DEB3:#DEB887>Книжный червь</gradient>"
+        material: BOOK
+        target-amount: 32
+        craft-material: BOOK
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: BOOKSHELF
+            amount: 8
+      task_w4_08:
+        type: CRAFT
+        display-name: "<gradient:#8B4513:#D2691E>Книжные полки</gradient>"
+        material: BOOKSHELF
+        target-amount: 16
+        craft-material: BOOKSHELF
+        reward-exp: 30
+      task_w4_09:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFD700:#FFA500>Светокаменщик</gradient>"
+        material: GLOWSTONE
+        target-amount: 64
+        block-material: GLOWSTONE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: GLOWSTONE_DUST
+            amount: 128
+      task_w4_10:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#8B0000:#FF0000>Наростной сбор</gradient>"
+        material: NETHER_WART
+        target-amount: 64
+        item-material: NETHER_WART
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: NETHER_WART
+            amount: 32
+      task_w4_11:
+        type: CONSUME_POTION
+        display-name: "<gradient:#00BFFF:#1E90FF>Скоростной марафон</gradient>"
+        material: POTION
+        target-amount: 8
+        potion-effect: SPEED
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: SUGAR
+            amount: 32
+      task_w4_12:
+        type: CONSUME_POTION
+        display-name: "<gradient:#FF4500:#DC143C>Сила берсерка</gradient>"
+        material: POTION
+        target-amount: 8
+        potion-effect: STRENGTH
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 8
+      task_w4_13:
+        type: CONSUME_POTION
+        display-name: "<gradient:#FF4500:#FF8C00>Огненная прогулка</gradient>"
+        material: POTION
+        target-amount: 5
+        potion-effect: FIRE_RESISTANCE
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: MAGMA_CREAM
+            amount: 4
+      task_w4_14:
+        type: DELIVER
+        display-name: "<gradient:#FFFFFF:#F0F0F0>Слеза гаста</gradient>"
+        material: GHAST_TEAR
+        target-amount: 8
+        item-material: GHAST_TEAR
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: END_CRYSTAL
+            amount: 2
+      task_w4_15:
+        type: DELIVER
+        display-name: "<gradient:#FF8C00:#FF4500>Огненный стержень</gradient>"
+        material: BLAZE_ROD
+        target-amount: 16
+        item-material: BLAZE_ROD
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 16
+      task_w4_16:
+        type: CRAFT
+        display-name: "<gradient:#FF4500:#8B0000>Магмовый крем</gradient>"
+        material: MAGMA_CREAM
+        target-amount: 12
+        craft-material: MAGMA_CREAM
+        reward-exp: 25
+      task_w4_17:
+        type: CRAFT
+        display-name: "<gradient:#8B0000:#4B0082>Приготовленный глаз</gradient>"
+        material: FERMENTED_SPIDER_EYE
+        target-amount: 5
+        craft-material: FERMENTED_SPIDER_EYE
+        reward-exp: 30
+      task_w4_18:
+        type: ENCHANT
+        display-name: "<gradient:#00FFFF:#9370DB>Таинственные чары</gradient>"
+        material: ENCHANTED_BOOK
+        target-amount: 8
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 16
+      task_w4_19:
+        type: ENCHANT
+        display-name: "<gradient:#4169E1:#00FFFF>Зачарование брони</gradient>"
+        material: DIAMOND_CHESTPLATE
+        target-amount: 5
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 16
+      task_w4_20:
+        type: BREW
+        display-name: "<gradient:#9932CC:#8B008B>Зелья невидимости</gradient>"
+        material: POTION
+        target-amount: 5
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: GOLDEN_CARROT
+            amount: 8
+      task_w4_21:
+        type: BREW
+        display-name: "<gradient:#FF69B4:#FF1493>Зелья регенерации</gradient>"
+        material: POTION
+        target-amount: 5
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: GHAST_TEAR
+            amount: 2
+      task_w4_22:
+        type: CONSUME_POTION
+        display-name: "<gradient:#9932CC:#8B008B>Невидимка</gradient>"
+        material: POTION
+        target-amount: 5
+        potion-effect: INVISIBILITY
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: GOLDEN_CARROT
+            amount: 4
+      task_w4_23:
+        type: CONSUME_POTION
+        display-name: "<gradient:#FF69B4:#FF1493>Регенерация</gradient>"
+        material: POTION
+        target-amount: 5
+        potion-effect: REGENERATION
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: GHAST_TEAR
+            amount: 2
+      task_w4_24:
+        type: CONSUME_POTION
+        display-name: "<gradient:#00CED1:#1E90FF>Ночное зрение</gradient>"
+        material: POTION
+        target-amount: 5
+        potion-effect: NIGHT_VISION
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: GOLDEN_CARROT
+            amount: 4
+      task_w4_25:
+        type: CONSUME_POTION
+        display-name: "<gradient:#FFFFFF:#D3D3D3>Медленное падение</gradient>"
+        material: POTION
+        target-amount: 5
+        potion-effect: SLOW_FALLING
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: PHANTOM_MEMBRANE
+            amount: 4
+      task_w4_26:
+        type: CONSUME_POTION
+        display-name: "<gradient:#00FF00:#32CD32>Прыгучесть</gradient>"
+        material: POTION
+        target-amount: 8
+        potion-effect: JUMP_BOOST
+        reward-exp: 35
+      task_w4_27:
+        type: KILL
+        display-name: "<gradient:#FF8C00:#FF4500>Ифритовый гринд</gradient>"
+        material: BLAZE_ROD
+        target-amount: 25
+        entity-type: BLAZE
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 32
+      task_w4_28:
+        type: KILL
+        display-name: "<gradient:#FF4500:#8B0000>Магмовый слизень</gradient>"
+        material: MAGMA_CREAM
+        target-amount: 15
+        entity-type: MAGMA_CUBE
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: MAGMA_BLOCK
+            amount: 16
+
+  # ═══════════════════════════════════════════════════════════
+  # W5 — Рыбак (★★★) 35qp | Удочка Unb3 Lure3 LotS3 Mending
+  # ═══════════════════════════════════════════════════════════
+  week_5:
+    display-name: "<gradient:#00CED1:#006064>◈ Неделя 5 — Рыбак</gradient>"
+    quest-points: 35
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:fishing_rod[enchantments={unbreaking:3,lure:3,luck_of_the_sea:3,mending:1},item_name=''{"bold":true,"color":"gold","text":"Удочка Рыбака"}'' 1'
+    tasks:
+      task_w5_01:
+        type: FISH
+        display-name: "<gradient:#00BFFF:#1E90FF>Рыбак-новичок</gradient>"
+        material: COD
+        target-amount: 20
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: COD
+            amount: 16
+      task_w5_02:
+        type: FISH
+        display-name: "<gradient:#FA8072:#FF6347>Лососевая путина</gradient>"
+        material: SALMON
+        target-amount: 15
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: SALMON
+            amount: 8
+      task_w5_03:
+        type: FISH
+        display-name: "<gradient:#FF69B4:#FFD700>Тропический улов</gradient>"
+        material: TROPICAL_FISH
+        target-amount: 10
+        reward-exp: 30
+      task_w5_04:
+        type: FISH
+        display-name: "<gradient:#FFD700:#FFA500>Опасный улов</gradient>"
+        material: PUFFERFISH
+        target-amount: 5
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: PUFFERFISH
+            amount: 2
+      task_w5_05:
+        type: EAT
+        display-name: "<gradient:#00CED1:#4682B4>Рыбный день</gradient>"
+        material: COOKED_COD
+        target-amount: 32
+        item-material: COOKED_COD
+        reward-exp: 20
+      task_w5_06:
+        type: EAT
+        display-name: "<gradient:#FA8072:#FF6347>Красная рыба</gradient>"
+        material: COOKED_SALMON
+        target-amount: 24
+        item-material: COOKED_SALMON
+        reward-exp: 20
+      task_w5_07:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#006400:#228B22>Сборщик ламинарии</gradient>"
+        material: KELP
+        target-amount: 64
+        block-material: KELP
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: DRIED_KELP
+            amount: 32
+      task_w5_08:
+        type: SMELT
+        display-name: "<gradient:#556B2F:#6B8E23>Сушка водорослей</gradient>"
+        material: DRIED_KELP
+        target-amount: 32
+        item-material: DRIED_KELP
+        reward-exp: 20
+      task_w5_09:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#00CED1:#008B8B>Призмариновый рудник</gradient>"
+        material: PRISMARINE
+        target-amount: 64
+        block-material: PRISMARINE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: PRISMARINE_SHARD
+            amount: 16
+      task_w5_10:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#00FFFF:#00CED1>Морской фонарь</gradient>"
+        material: SEA_LANTERN
+        target-amount: 16
+        block-material: SEA_LANTERN
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: PRISMARINE_CRYSTALS
+            amount: 8
+      task_w5_11:
+        type: BREED
+        display-name: "<gradient:#4682B4:#00BFFF>Друг дельфинов</gradient>"
+        material: COD
+        target-amount: 3
+        entity-type: DOLPHIN
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: COD
+            amount: 16
+      task_w5_12:
+        type: BREED
+        display-name: "<gradient:#00FF7F:#32CD32>Черепаший пляж</gradient>"
+        material: SEAGRASS
+        target-amount: 5
+        entity-type: TURTLE
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: SCUTE
+            amount: 2
+      task_w5_13:
+        type: KILL
+        display-name: "<gradient:#008080:#20B2AA>Истребитель стражей</gradient>"
+        material: PRISMARINE_SHARD
+        target-amount: 15
+        entity-type: GUARDIAN
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: COD
+            amount: 16
+      task_w5_14:
+        type: KILL
+        display-name: "<gradient:#3CB371:#2E8B57>Утопленник</gradient>"
+        material: TRIDENT
+        target-amount: 10
+        entity-type: DROWNED
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: NAUTILUS_SHELL
+            amount: 1
+      task_w5_15:
+        type: BUCKET_FILL
+        display-name: "<gradient:#00BFFF:#4682B4>Водонос</gradient>"
+        material: WATER_BUCKET
+        target-amount: 10
+        item-material: WATER_BUCKET
+        reward-exp: 15
+      task_w5_16:
+        type: BUCKET_FILL
+        display-name: "<gradient:#FF4500:#FF0000>Лавонос</gradient>"
+        material: LAVA_BUCKET
+        target-amount: 5
+        item-material: LAVA_BUCKET
+        reward-exp: 25
+      task_w5_17:
+        type: CRAFT
+        display-name: "<gradient:#8B4513:#CD853F>Корабел</gradient>"
+        material: OAK_BOAT
+        target-amount: 4
+        craft-material: OAK_BOAT
+        reward-exp: 15
+      task_w5_18:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFD700:#DAA520>Губчатый сбор</gradient>"
+        material: SPONGE
+        target-amount: 8
+        block-material: SPONGE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: SPONGE
+            amount: 4
+      task_w5_19:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#00FF7F:#2E8B57>Морская трава</gradient>"
+        material: SEAGRASS
+        target-amount: 32
+        block-material: SEAGRASS
+        reward-exp: 15
+      task_w5_20:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FF69B4:#FF1493>Коралловый риф</gradient>"
+        material: BRAIN_CORAL
+        target-amount: 16
+        block-material: BRAIN_CORAL
+        reward-exp: 20
+      task_w5_21:
+        type: FISH
+        display-name: "<gradient:#00CED1:#FFD700>Морской охотник</gradient>"
+        material: ENCHANTED_BOOK
+        target-amount: 15
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: NAUTILUS_SHELL
+            amount: 2
+      task_w5_22:
+        type: DELIVER
+        display-name: "<gradient:#00FFFF:#00CED1>Сдать треску</gradient>"
+        material: COD
+        target-amount: 64
+        item-material: COD
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: COOKED_COD
+            amount: 64
+      task_w5_23:
+        type: DELIVER
+        display-name: "<gradient:#FA8072:#FF6347>Сдать лосось</gradient>"
+        material: SALMON
+        target-amount: 32
+        item-material: SALMON
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: COOKED_SALMON
+            amount: 32
+      task_w5_24:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#00CED1:#008B8B>Призмариновый запас</gradient>"
+        material: PRISMARINE_SHARD
+        target-amount: 64
+        item-material: PRISMARINE_SHARD
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: PRISMARINE_CRYSTALS
+            amount: 16
+      task_w5_25:
+        type: CRAFT
+        display-name: "<gradient:#00BFFF:#1E90FF>Морской проводник</gradient>"
+        material: CONDUIT
+        target-amount: 1
+        craft-material: CONDUIT
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: PRISMARINE_BRICKS
+            amount: 32
+      task_w5_26:
+        type: FISH
+        display-name: "<gradient:#FFD700:#FFA500>Сундук со дна</gradient>"
+        material: NAUTILUS_SHELL
+        target-amount: 3
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: HEART_OF_THE_SEA
+            amount: 1
+      task_w5_27:
+        type: KILL
+        display-name: "<gradient:#00CED1:#00008B>Древний страж</gradient>"
+        material: SPONGE
+        target-amount: 1
+        entity-type: ELDER_GUARDIAN
+        reward-exp: 75
+        rewards:
+          reward_1:
+            material: SPONGE
+            amount: 16
+      task_w5_28:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#00FFFF:#FFD700>Сердце моря</gradient>"
+        material: HEART_OF_THE_SEA
+        target-amount: 1
+        item-material: HEART_OF_THE_SEA
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: CONDUIT
+            amount: 1
+
+  # ═══════════════════════════════════════════════════════════
+  # W6 — Строитель (★★★) 40qp | Незеритовый топор Unb3 Eff5 Silk
+  # ═══════════════════════════════════════════════════════════
+  week_6:
+    display-name: "<gradient:#8B4513:#D2691E>▰ Неделя 6 — Строитель</gradient>"
+    quest-points: 40
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:netherite_axe[enchantments={unbreaking:3,efficiency:5,silk_touch:1},item_name=''{"bold":true,"color":"gold","text":"Топор Строителя"}'' 1'
+    tasks:
+      task_w6_01:
+        type: CRAFT
+        display-name: "<gradient:#DEB887:#8B4513>Дубовые доски</gradient>"
+        material: OAK_PLANKS
+        target-amount: 256
+        craft-material: OAK_PLANKS
+        reward-exp: 20
+      task_w6_02:
+        type: CRAFT
+        display-name: "<gradient:#FFD700:#FFA500>Факельщик</gradient>"
+        material: TORCH
+        target-amount: 128
+        craft-material: TORCH
+        reward-exp: 20
+      task_w6_03:
+        type: CRAFT
+        display-name: "<gradient:#D2691E:#8B4513>Сундучник</gradient>"
+        material: CHEST
+        target-amount: 16
+        craft-material: CHEST
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: BARREL
+            amount: 4
+      task_w6_04:
+        type: CRAFT
+        display-name: "<gradient:#DEB887:#CD853F>Лестницы</gradient>"
+        material: LADDER
+        target-amount: 48
+        craft-material: LADDER
+        reward-exp: 15
+      task_w6_05:
+        type: CRAFT
+        display-name: "<gradient:#DEB887:#8B4513>Заборостроитель</gradient>"
+        material: OAK_FENCE
+        target-amount: 64
+        craft-material: OAK_FENCE
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: OAK_FENCE_GATE
+            amount: 8
+      task_w6_06:
+        type: CRAFT
+        display-name: "<gradient:#8B4513:#A0522D>Дверной мастер</gradient>"
+        material: OAK_DOOR
+        target-amount: 8
+        craft-material: OAK_DOOR
+        reward-exp: 15
+      task_w6_07:
+        type: CRAFT
+        display-name: "<gradient:#DEB887:#CD853F>Таблички</gradient>"
+        material: OAK_SIGN
+        target-amount: 16
+        craft-material: OAK_SIGN
+        reward-exp: 15
+      task_w6_08:
+        type: CRAFT
+        display-name: "<gradient:#FF4500:#FF6347>Костровой</gradient>"
+        material: CAMPFIRE
+        target-amount: 4
+        craft-material: CAMPFIRE
+        reward-exp: 15
+      task_w6_09:
+        type: CRAFT
+        display-name: "<gradient:#FFD700:#FFA500>Фонарщик</gradient>"
+        material: LANTERN
+        target-amount: 16
+        craft-material: LANTERN
+        reward-exp: 20
+      task_w6_10:
+        type: CRAFT
+        display-name: "<gradient:#FF69B4:#FF1493>Художник</gradient>"
+        material: PAINTING
+        target-amount: 8
+        craft-material: PAINTING
+        reward-exp: 15
+      task_w6_11:
+        type: CRAFT
+        display-name: "<gradient:#FF6347:#FF4500>Гончар</gradient>"
+        material: FLOWER_POT
+        target-amount: 16
+        craft-material: FLOWER_POT
+        reward-exp: 15
+      task_w6_12:
+        type: SMELT
+        display-name: "<gradient:#87CEEB:#B0C4DE>Плавка стекла</gradient>"
+        material: GLASS
+        target-amount: 256
+        item-material: GLASS
+        reward-exp: 30
+      task_w6_13:
+        type: CRAFT
+        display-name: "<gradient:#87CEEB:#B0E0E6>Стекольщик</gradient>"
+        material: GLASS_PANE
+        target-amount: 128
+        craft-material: GLASS_PANE
+        reward-exp: 25
+      task_w6_14:
+        type: SMELT
+        display-name: "<gradient:#808080:#A9A9A9>Обжиг камня</gradient>"
+        material: STONE
+        target-amount: 256
+        item-material: STONE
+        reward-exp: 30
+      task_w6_15:
+        type: CRAFT
+        display-name: "<gradient:#A9A9A9:#D3D3D3>Каменные кирпичи</gradient>"
+        material: STONE_BRICKS
+        target-amount: 256
+        craft-material: STONE_BRICKS
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: STONE_BRICK_STAIRS
+            amount: 64
+      task_w6_16:
+        type: CRAFT
+        display-name: "<gradient:#B22222:#FF6347>Кирпичный завод</gradient>"
+        material: BRICKS
+        target-amount: 128
+        craft-material: BRICKS
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: CLAY
+            amount: 32
+      task_w6_17:
+        type: SMELT
+        display-name: "<gradient:#B22222:#FF6347>Обжиг терракоты</gradient>"
+        material: TERRACOTTA
+        target-amount: 64
+        item-material: TERRACOTTA
+        reward-exp: 25
+      task_w6_18:
+        type: CRAFT
+        display-name: "<gradient:#FF1493:#FF69B4>Мягкая постель</gradient>"
+        material: RED_BED
+        target-amount: 3
+        craft-material: RED_BED
+        reward-exp: 15
+      task_w6_19:
+        type: CRAFT
+        display-name: "<gradient:#F5DEB3:#DEB887>Строительные леса</gradient>"
+        material: SCAFFOLDING
+        target-amount: 128
+        craft-material: SCAFFOLDING
+        reward-exp: 25
+      task_w6_20:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#87CEEB:#4682B4>Глиняный карьер</gradient>"
+        material: CLAY
+        target-amount: 64
+        block-material: CLAY
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: CLAY_BALL
+            amount: 128
+      task_w6_21:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#00FFFF:#FFD700>Маяк надежды</gradient>"
+        material: BEACON
+        target-amount: 1
+        block-material: BEACON
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: IRON_BLOCK
+            amount: 64
+      task_w6_22:
+        type: CRAFT
+        display-name: "<gradient:#D2691E:#8B4513>Бочкострой</gradient>"
+        material: BARREL
+        target-amount: 16
+        craft-material: BARREL
+        reward-exp: 25
+      task_w6_23:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#8B4513:#A0522D>Лесозаготовка</gradient>"
+        material: OAK_LOG
+        target-amount: 512
+        block-material: OAK_LOG
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: OAK_PLANKS
+            amount: 256
+      task_w6_24:
+        type: DELIVER
+        display-name: "<gradient:#808080:#696969>Сдать булыжник</gradient>"
+        material: COBBLESTONE
+        target-amount: 512
+        item-material: COBBLESTONE
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: STONE
+            amount: 256
+      task_w6_25:
+        type: CRAFT
+        display-name: "<gradient:#00FFFF:#00CED1>Алмазный блок</gradient>"
+        material: DIAMOND_BLOCK
+        target-amount: 3
+        craft-material: DIAMOND_BLOCK
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: DIAMOND
+            amount: 3
+      task_w6_26:
+        type: CRAFT
+        display-name: "<gradient:#00FF00:#32CD32>Изумрудный блок</gradient>"
+        material: EMERALD_BLOCK
+        target-amount: 3
+        craft-material: EMERALD_BLOCK
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: EMERALD
+            amount: 3
+      task_w6_27:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#8B4513:#D2691E>Блоки земли</gradient>"
+        material: DIRT
+        target-amount: 512
+        block-material: DIRT
+        reward-exp: 40
+      task_w6_28:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#00FFFF:#FFD700>Строительный магнат</gradient>"
+        material: IRON_BLOCK
+        target-amount: 64
+        item-material: IRON_INGOT
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: IRON_BLOCK
+            amount: 16
+
+  # ═══════════════════════════════════════════════════════════
+  # W7 — Незер (★★★) 50qp | Незеритовые ботинки Unb3 Prot4 Soul3
+  # ═══════════════════════════════════════════════════════════
+  week_7:
+    display-name: "<gradient:#8B0000:#FF4500>☠ Неделя 7 — Покоритель Незера</gradient>"
+    quest-points: 50
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:netherite_boots[enchantments={unbreaking:3,protection:4,soul_speed:3},item_name=''{"bold":true,"color":"gold","text":"Ботинки Странника"}'' 1'
+    tasks:
+      task_w7_01:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#8B0000:#B22222>Незераковый шахтёр</gradient>"
+        material: NETHERRACK
+        target-amount: 256
+        block-material: NETHERRACK
+        reward-exp: 25
+      task_w7_02:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFFFFF:#E8E8E8>Кварцевый забой</gradient>"
+        material: NETHER_QUARTZ_ORE
+        target-amount: 64
+        block-material: NETHER_QUARTZ_ORE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: QUARTZ_BLOCK
+            amount: 8
+      task_w7_03:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFD700:#DAA520>Золото Незера</gradient>"
+        material: NETHER_GOLD_ORE
+        target-amount: 48
+        block-material: NETHER_GOLD_ORE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: GOLD_NUGGET
+            amount: 64
+      task_w7_04:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#2F2F2F:#1C1C1C>Чернокаменщик</gradient>"
+        material: BLACKSTONE
+        target-amount: 128
+        block-material: BLACKSTONE
+        reward-exp: 25
+      task_w7_05:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#696969:#4F4F4F>Базальтовый слом</gradient>"
+        material: BASALT
+        target-amount: 64
+        block-material: BASALT
+        reward-exp: 25
+      task_w7_06:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#4B0082:#2E0854>Песок душ</gradient>"
+        material: SOUL_SAND
+        target-amount: 64
+        block-material: SOUL_SAND
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: SOUL_TORCH
+            amount: 16
+      task_w7_07:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#6B3FA0:#4B0082>Почва душ</gradient>"
+        material: SOUL_SOIL
+        target-amount: 64
+        block-material: SOUL_SOIL
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: SOUL_CAMPFIRE
+            amount: 4
+      task_w7_08:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFA500:#FF8C00>Грибосвет</gradient>"
+        material: SHROOMLIGHT
+        target-amount: 16
+        block-material: SHROOMLIGHT
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: GLOWSTONE
+            amount: 8
+      task_w7_09:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#8B0000:#B22222>Багровый лесоруб</gradient>"
+        material: CRIMSON_STEM
+        target-amount: 64
+        block-material: CRIMSON_STEM
+        reward-exp: 25
+      task_w7_10:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#008080:#20B2AA>Искажённый лесоруб</gradient>"
+        material: WARPED_STEM
+        target-amount: 64
+        block-material: WARPED_STEM
+        reward-exp: 25
+      task_w7_11:
+        type: KILL
+        display-name: "<gradient:#FF8C00:#FF4500>Укротитель пламени</gradient>"
+        material: BLAZE_ROD
+        target-amount: 20
+        entity-type: BLAZE
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 32
+      task_w7_12:
+        type: KILL
+        display-name: "<gradient:#FFFFFF:#E8E8E8>Охотник на гастов</gradient>"
+        material: GHAST_TEAR
+        target-amount: 10
+        entity-type: GHAST
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: GHAST_TEAR
+            amount: 2
+      task_w7_13:
+        type: KILL
+        display-name: "<gradient:#FF4500:#8B0000>Магмовый слизень</gradient>"
+        material: MAGMA_CREAM
+        target-amount: 15
+        entity-type: MAGMA_CUBE
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: MAGMA_BLOCK
+            amount: 16
+      task_w7_14:
+        type: KILL
+        display-name: "<gradient:#FFD700:#DAA520>Золотой разбойник</gradient>"
+        material: GOLDEN_SWORD
+        target-amount: 20
+        entity-type: PIGLIN
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: GOLD_NUGGET
+            amount: 64
+      task_w7_15:
+        type: KILL
+        display-name: "<gradient:#8B4513:#A0522D>Кабаний истребитель</gradient>"
+        material: COOKED_PORKCHOP
+        target-amount: 15
+        entity-type: HOGLIN
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: LEATHER
+            amount: 16
+      task_w7_16:
+        type: KILL
+        display-name: "<gradient:#B22222:#FF0000>Лавовый странник</gradient>"
+        material: STRING
+        target-amount: 8
+        entity-type: STRIDER
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: SADDLE
+            amount: 1
+      task_w7_17:
+        type: KILL
+        display-name: "<gradient:#FFD700:#CD853F>Зомби-пиглин</gradient>"
+        material: GOLDEN_SWORD
+        target-amount: 25
+        entity-type: ZOMBIFIED_PIGLIN
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: GOLD_NUGGET
+            amount: 64
+      task_w7_18:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FF0000:#8B0000>Наростной блок</gradient>"
+        material: NETHER_WART_BLOCK
+        target-amount: 32
+        block-material: NETHER_WART_BLOCK
+        reward-exp: 25
+      task_w7_19:
+        type: DELIVER
+        display-name: "<gradient:#FF8C00:#FF4500>Огненный стержень</gradient>"
+        material: BLAZE_ROD
+        target-amount: 32
+        item-material: BLAZE_ROD
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 32
+      task_w7_20:
+        type: DELIVER
+        display-name: "<gradient:#FFFFFF:#F0F0F0>Слеза гаста</gradient>"
+        material: GHAST_TEAR
+        target-amount: 12
+        item-material: GHAST_TEAR
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: END_CRYSTAL
+            amount: 2
+      task_w7_21:
+        type: KILL
+        display-name: "<gradient:#2F2F2F:#1C1C1C>Черепной охотник</gradient>"
+        material: WITHER_SKELETON_SKULL
+        target-amount: 10
+        entity-type: WITHER_SKELETON
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: COAL
+            amount: 64
+      task_w7_22:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#8B4513:#654321>Древние обломки</gradient>"
+        material: ANCIENT_DEBRIS
+        target-amount: 8
+        block-material: ANCIENT_DEBRIS
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: NETHERITE_SCRAP
+            amount: 8
+      task_w7_23:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FFA500>Светокаменный запас</gradient>"
+        material: GLOWSTONE
+        target-amount: 128
+        item-material: GLOWSTONE_DUST
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: GLOWSTONE
+            amount: 32
+      task_w7_24:
+        type: CRAFT
+        display-name: "<gradient:#696969:#FFD700>Незеритовый слиток</gradient>"
+        material: NETHERITE_INGOT
+        target-amount: 2
+        craft-material: NETHERITE_INGOT
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: NETHERITE_SCRAP
+            amount: 4
+      task_w7_25:
+        type: KILL
+        display-name: "<gradient:#FF8C00:#FF4500>Пламенный гринд</gradient>"
+        material: BLAZE_ROD
+        target-amount: 40
+        entity-type: BLAZE
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 64
+      task_w7_26:
+        type: KILL
+        display-name: "<gradient:#FFD700:#DAA520>Пиглин-ферма</gradient>"
+        material: GOLD_NUGGET
+        target-amount: 50
+        entity-type: PIGLIN
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: GOLD_BLOCK
+            amount: 4
+      task_w7_27:
+        type: DELIVER
+        display-name: "<gradient:#8B4513:#654321>Сдать обломки</gradient>"
+        material: ANCIENT_DEBRIS
+        target-amount: 8
+        item-material: ANCIENT_DEBRIS
+        reward-exp: 70
+        rewards:
+          reward_1:
+            material: NETHERITE_SCRAP
+            amount: 8
+      task_w7_28:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#696969:#FFD700>Незеритовый запас</gradient>"
+        material: NETHERITE_INGOT
+        target-amount: 2
+        item-material: NETHERITE_INGOT
+        reward-exp: 70
+        rewards:
+          reward_1:
+            material: NETHERITE_SCRAP
+            amount: 4
+
+  # ═══════════════════════════════════════════════════════════
+  # W8 — Энд (★★★★) 60qp | Элитры Unb3 + Шалкер-бокс
+  # ═══════════════════════════════════════════════════════════
+  week_8:
+    display-name: "<gradient:#FF00FF:#1E90FF>✧ Неделя 8 — Исследователь Края</gradient>"
+    quest-points: 60
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:elytra[enchantments={unbreaking:3},item_name=''{"bold":true,"color":"gold","text":"Крылья Странника"}'' 1'
+      reward_2:
+        command: '/minecraft:give %player% minecraft:purple_shulker_box[item_name=''{"bold":true,"color":"light_purple","text":"Сундук Края"}'' 1'
+    tasks:
+      task_w8_01:
+        type: KILL
+        display-name: "<gradient:#FF00FF:#8B008B>Эндермен</gradient>"
+        material: ENDER_PEARL
+        target-amount: 20
+        entity-type: ENDERMAN
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: ENDER_PEARL
+            amount: 8
+      task_w8_02:
+        type: CRAFT
+        display-name: "<gradient:#00FFFF:#FF00FF>Око Эндера</gradient>"
+        material: ENDER_EYE
+        target-amount: 12
+        craft-material: ENDER_EYE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: ENDER_PEARL
+            amount: 4
+      task_w8_03:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#2F2F2F:#9400D3>Обсидиановый сбор</gradient>"
+        material: OBSIDIAN
+        target-amount: 64
+        block-material: OBSIDIAN
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: OBSIDIAN
+            amount: 16
+      task_w8_04:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#F5DEB3:#DAA520>Эндерняк</gradient>"
+        material: END_STONE
+        target-amount: 128
+        block-material: END_STONE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: END_STONE_BRICKS
+            amount: 64
+      task_w8_05:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FF00FF:#9932CC>Хорус-фермер</gradient>"
+        material: CHORUS_FRUIT
+        target-amount: 32
+        block-material: CHORUS_PLANT
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: CHORUS_FRUIT
+            amount: 16
+      task_w8_06:
+        type: EAT
+        display-name: "<gradient:#FF69B4:#FF00FF>Хорус-гурман</gradient>"
+        material: CHORUS_FRUIT
+        target-amount: 16
+        item-material: CHORUS_FRUIT
+        reward-exp: 25
+      task_w8_07:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FF69B4:#C71585>Пурпурный строитель</gradient>"
+        material: PURPUR_BLOCK
+        target-amount: 64
+        block-material: PURPUR_BLOCK
+        reward-exp: 30
+      task_w8_08:
+        type: KILL
+        display-name: "<gradient:#9932CC:#BA55D3>Шалкер-охотник</gradient>"
+        material: SHULKER_SHELL
+        target-amount: 10
+        entity-type: SHULKER
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: SHULKER_SHELL
+            amount: 2
+      task_w8_09:
+        type: CRAFT
+        display-name: "<gradient:#FF00FF:#9932CC>Эндер-сундук</gradient>"
+        material: ENDER_CHEST
+        target-amount: 2
+        craft-material: ENDER_CHEST
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: OBSIDIAN
+            amount: 8
+      task_w8_10:
+        type: CRAFT
+        display-name: "<gradient:#9932CC:#FF00FF>Шалкер-бокс</gradient>"
+        material: PURPLE_SHULKER_BOX
+        target-amount: 2
+        craft-material: PURPLE_SHULKER_BOX
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: SHULKER_SHELL
+            amount: 1
+      task_w8_11:
+        type: DELIVER
+        display-name: "<gradient:#00FF00:#32CD32>Жемчужный склад</gradient>"
+        material: ENDER_PEARL
+        target-amount: 32
+        item-material: ENDER_PEARL
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: ENDER_EYE
+            amount: 4
+      task_w8_12:
+        type: CRAFT
+        display-name: "<gradient:#9932CC:#FF00FF>Якорь возрождения</gradient>"
+        material: RESPAWN_ANCHOR
+        target-amount: 1
+        craft-material: RESPAWN_ANCHOR
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: GLOWSTONE
+            amount: 16
+      task_w8_13:
+        type: CRAFT
+        display-name: "<gradient:#00FFFF:#FFD700>Маяк надежды</gradient>"
+        material: BEACON
+        target-amount: 1
+        craft-material: BEACON
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: IRON_BLOCK
+            amount: 9
+      task_w8_14:
+        type: CRAFT
+        display-name: "<gradient:#FF00FF:#FF1493>Кристалл Края</gradient>"
+        material: END_CRYSTAL
+        target-amount: 4
+        craft-material: END_CRYSTAL
+        reward-exp: 45
+      task_w8_15:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FFA500>Тотем бессмертия</gradient>"
+        material: TOTEM_OF_UNDYING
+        target-amount: 1
+        item-material: TOTEM_OF_UNDYING
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: EMERALD
+            amount: 16
+      task_w8_16:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FF00FF:#8B008B>Дыхание дракона</gradient>"
+        material: DRAGON_BREATH
+        target-amount: 5
+        item-material: DRAGON_BREATH
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: GLASS_BOTTLE
+            amount: 32
+      task_w8_17:
+        type: KILL
+        display-name: "<gradient:#FF00FF:#8B008B>Эндер-ферма</gradient>"
+        material: ENDER_PEARL
+        target-amount: 50
+        entity-type: ENDERMAN
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: ENDER_EYE
+            amount: 8
+      task_w8_18:
+        type: BUCKET_FILL
+        display-name: "<gradient:#FF4500:#FF0000>Лавовая река</gradient>"
+        material: LAVA_BUCKET
+        target-amount: 10
+        item-material: LAVA_BUCKET
+        reward-exp: 30
+      task_w8_19:
+        type: CRAFT
+        display-name: "<gradient:#696969:#FFD700>Незеритовый слиток</gradient>"
+        material: NETHERITE_INGOT
+        target-amount: 1
+        craft-material: NETHERITE_INGOT
+        reward-exp: 60
+      task_w8_20:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FFA500>Голова дракона</gradient>"
+        material: DRAGON_HEAD
+        target-amount: 1
+        item-material: DRAGON_HEAD
+        reward-exp: 70
+        rewards:
+          reward_1:
+            material: END_CRYSTAL
+            amount: 4
+      task_w8_21:
+        type: KILL
+        display-name: "<gradient:#9932CC:#BA55D3>Шалкер-гринд</gradient>"
+        material: SHULKER_SHELL
+        target-amount: 16
+        entity-type: SHULKER
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: SHULKER_BOX
+            amount: 2
+      task_w8_22:
+        type: DELIVER
+        display-name: "<gradient:#FF69B4:#C71585>Сдать пурпур</gradient>"
+        material: PURPUR_BLOCK
+        target-amount: 128
+        item-material: PURPUR_BLOCK
+        reward-exp: 40
+      task_w8_23:
+        type: DELIVER
+        display-name: "<gradient:#F5DEB3:#DAA520>Сдать эндерняк</gradient>"
+        material: END_STONE
+        target-amount: 256
+        item-material: END_STONE
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: END_STONE_BRICKS
+            amount: 128
+      task_w8_24:
+        type: ENCHANT
+        display-name: "<gradient:#00FFFF:#FF00FF>Чары на элитры</gradient>"
+        material: ELYTRA
+        target-amount: 1
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 32
+      task_w8_25:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#2F2F2F:#9400D3>Обсидиановая ферма</gradient>"
+        material: OBSIDIAN
+        target-amount: 256
+        block-material: OBSIDIAN
+        reward-exp: 50
+      task_w8_26:
+        type: CONSUME_POTION
+        display-name: "<gradient:#FFFFFF:#D3D3D3>Медленное падение</gradient>"
+        material: POTION
+        target-amount: 10
+        potion-effect: SLOW_FALLING
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: PHANTOM_MEMBRANE
+            amount: 8
+      task_w8_27:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#9932CC:#FF00FF>Шалкер-коллекция</gradient>"
+        material: SHULKER_SHELL
+        target-amount: 16
+        item-material: SHULKER_SHELL
+        reward-exp: 60
+      task_w8_28:
+        type: CRAFT
+        display-name: "<gradient:#FFD700:#FF0000>Кристальная ферма</gradient>"
+        material: END_CRYSTAL
+        target-amount: 8
+        craft-material: END_CRYSTAL
+        reward-exp: 70
+        rewards:
+          reward_1:
+            material: OBSIDIAN
+            amount: 64
+
+  # ═══════════════════════════════════════════════════════════
+  # W9 — Торговец (★★★) 55qp | Изумрудный блок x9 + Алмазный блок x3
+  # ═══════════════════════════════════════════════════════════
+  week_9:
+    display-name: "<gradient:#32CD32:#FFD700>◉ Неделя 9 — Торговая империя</gradient>"
+    quest-points: 55
+    rewards:
+      reward_1:
+        material: EMERALD_BLOCK
+        amount: 9
+      reward_2:
+        material: DIAMOND_BLOCK
+        amount: 3
+    tasks:
+      task_w9_01:
+        type: TRADE
+        display-name: "<gradient:#32CD32:#FFD700>Мастер торговли</gradient>"
+        material: EMERALD
+        target-amount: 50
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: EMERALD
+            amount: 16
+      task_w9_02:
+        type: TRADE
+        display-name: "<gradient:#90EE90:#228B22>Базарный день</gradient>"
+        material: WHEAT
+        target-amount: 30
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: EMERALD
+            amount: 8
+      task_w9_03:
+        type: TRADE
+        display-name: "<gradient:#8B4513:#D2691E>Библиотекарь</gradient>"
+        material: BOOK
+        target-amount: 20
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: BOOKSHELF
+            amount: 4
+      task_w9_04:
+        type: TRADE
+        display-name: "<gradient:#D3D3D3:#A9A9A9>Бронник-торговец</gradient>"
+        material: IRON_CHESTPLATE
+        target-amount: 15
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: IRON_INGOT
+            amount: 8
+      task_w9_05:
+        type: TRADE
+        display-name: "<gradient:#808080:#696969>Инструментальщик</gradient>"
+        material: IRON_PICKAXE
+        target-amount: 15
+        reward-exp: 35
+      task_w9_06:
+        type: TRADE
+        display-name: "<gradient:#FF4444:#8B0000>Оружейник</gradient>"
+        material: IRON_SWORD
+        target-amount: 15
+        reward-exp: 35
+      task_w9_07:
+        type: TRADE
+        display-name: "<gradient:#9932CC:#BA55D3>Священник</gradient>"
+        material: EXPERIENCE_BOTTLE
+        target-amount: 15
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 8
+      task_w9_08:
+        type: TRADE
+        display-name: "<gradient:#8B4513:#CD853F>Лучник-торговец</gradient>"
+        material: ARROW
+        target-amount: 15
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: ARROW
+            amount: 32
+      task_w9_09:
+        type: TRADE
+        display-name: "<gradient:#FF6347:#FF4500>Мясник</gradient>"
+        material: COOKED_BEEF
+        target-amount: 15
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: COOKED_BEEF
+            amount: 16
+      task_w9_10:
+        type: TRADE
+        display-name: "<gradient:#808080:#D3D3D3>Каменщик-торговец</gradient>"
+        material: STONE_BRICKS
+        target-amount: 15
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: TERRACOTTA
+            amount: 16
+      task_w9_11:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#00FF00:#32CD32>Изумрудный капитал</gradient>"
+        material: EMERALD
+        target-amount: 64
+        item-material: EMERALD
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: EMERALD
+            amount: 16
+      task_w9_12:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#DAA520>Золотой запас</gradient>"
+        material: GOLD_INGOT
+        target-amount: 32
+        item-material: GOLD_INGOT
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: GOLDEN_APPLE
+            amount: 4
+      task_w9_13:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#FFD700:#FFA500>Рыночный колокол</gradient>"
+        material: BELL
+        target-amount: 1
+        block-material: BELL
+        reward-exp: 30
+      task_w9_14:
+        type: CRAFT
+        display-name: "<gradient:#8B4513:#DEB887>Кафедра знаний</gradient>"
+        material: LECTERN
+        target-amount: 4
+        craft-material: LECTERN
+        reward-exp: 25
+      task_w9_15:
+        type: CRAFT
+        display-name: "<gradient:#808080:#A9A9A9>Точильный камень</gradient>"
+        material: GRINDSTONE
+        target-amount: 3
+        craft-material: GRINDSTONE
+        reward-exp: 25
+      task_w9_16:
+        type: CRAFT
+        display-name: "<gradient:#DEB887:#8B4513>Картограф</gradient>"
+        material: CARTOGRAPHY_TABLE
+        target-amount: 1
+        craft-material: CARTOGRAPHY_TABLE
+        reward-exp: 20
+      task_w9_17:
+        type: CRAFT
+        display-name: "<gradient:#696969:#FFD700>Стол кузнеца</gradient>"
+        material: SMITHING_TABLE
+        target-amount: 1
+        craft-material: SMITHING_TABLE
+        reward-exp: 20
+      task_w9_18:
+        type: CRAFT
+        display-name: "<gradient:#8B4513:#D2691E>Бочкострой</gradient>"
+        material: BARREL
+        target-amount: 8
+        craft-material: BARREL
+        reward-exp: 20
+      task_w9_19:
+        type: CRAFT
+        display-name: "<gradient:#F5DEB3:#DEB887>Картодел</gradient>"
+        material: MAP
+        target-amount: 5
+        craft-material: MAP
+        reward-exp: 25
+      task_w9_20:
+        type: CRAFT
+        display-name: "<gradient:#FF0000:#8B0000>Компасный мастер</gradient>"
+        material: COMPASS
+        target-amount: 3
+        craft-material: COMPASS
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: REDSTONE
+            amount: 16
+      task_w9_21:
+        type: TRADE
+        display-name: "<gradient:#32CD32:#FFD700>Империя торговли</gradient>"
+        material: EMERALD_BLOCK
+        target-amount: 100
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: EMERALD_BLOCK
+            amount: 2
+      task_w9_22:
+        type: CRAFT
+        display-name: "<gradient:#00FF00:#32CD32>Изумрудные блоки</gradient>"
+        material: EMERALD_BLOCK
+        target-amount: 5
+        craft-material: EMERALD_BLOCK
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: EMERALD
+            amount: 16
+      task_w9_23:
+        type: CRAFT
+        display-name: "<gradient:#00FFFF:#00CED1>Алмазные блоки</gradient>"
+        material: DIAMOND_BLOCK
+        target-amount: 3
+        craft-material: DIAMOND_BLOCK
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: DIAMOND
+            amount: 5
+      task_w9_24:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FFA500>Золотой магнат</gradient>"
+        material: GOLD_BLOCK
+        target-amount: 8
+        item-material: GOLD_INGOT
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: GOLDEN_APPLE
+            amount: 8
+      task_w9_25:
+        type: DELIVER
+        display-name: "<gradient:#00FF00:#32CD32>Сдать изумруды</gradient>"
+        material: EMERALD
+        target-amount: 64
+        item-material: EMERALD
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: EMERALD_BLOCK
+            amount: 4
+      task_w9_26:
+        type: BREED
+        display-name: "<gradient:#32CD32:#FFD700>Размножить жителей</gradient>"
+        material: BREAD
+        target-amount: 10
+        entity-type: VILLAGER
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: EMERALD
+            amount: 16
+      task_w9_27:
+        type: CRAFT
+        display-name: "<gradient:#696969:#FFD700>Магнетит</gradient>"
+        material: LODESTONE
+        target-amount: 1
+        craft-material: LODESTONE
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: COMPASS
+            amount: 4
+      task_w9_28:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FFA500>Сундук сокровищ</gradient>"
+        material: DIAMOND_BLOCK
+        target-amount: 5
+        item-material: DIAMOND
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: DIAMOND
+            amount: 5
+
+  # ═══════════════════════════════════════════════════════════
+  # W10 — Чародей (★★★★) 70qp | Незеритовый нагрудник Unb3 Prot4 + Mending x3
+  # ═══════════════════════════════════════════════════════════
+  week_10:
+    display-name: "<gradient:#FFD700:#FF0000>✧ Неделя 10 — Чародей</gradient>"
+    quest-points: 70
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:netherite_chestplate[enchantments={unbreaking:3,protection:4},item_name=''{"bold":true,"color":"gold","text":"Нагрудник Чародея"}'' 1'
+      reward_2:
+        command: '/minecraft:give %player% minecraft:enchanted_book[enchantments={mending:1}] 3'
+    tasks:
+      task_w10_01:
+        type: ENCHANT
+        display-name: "<gradient:#00FFFF:#9370DB>Таинственные чары</gradient>"
+        material: ENCHANTED_BOOK
+        target-amount: 10
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 16
+      task_w10_02:
+        type: ENCHANT
+        display-name: "<gradient:#4169E1:#00FFFF>Зачарование брони</gradient>"
+        material: DIAMOND_CHESTPLATE
+        target-amount: 5
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 16
+      task_w10_03:
+        type: ENCHANT
+        display-name: "<gradient:#00FFFF:#9370DB>Чары на кирку</gradient>"
+        material: DIAMOND_PICKAXE
+        target-amount: 5
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 16
+      task_w10_04:
+        type: ENCHANT
+        display-name: "<gradient:#FFD700:#FFA500>Чары на меч</gradient>"
+        material: DIAMOND_SWORD
+        target-amount: 5
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 16
+      task_w10_05:
+        type: CRAFT
+        display-name: "<gradient:#F5DEB3:#DEB887>Книжный червь</gradient>"
+        material: BOOK
+        target-amount: 64
+        craft-material: BOOK
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: BOOKSHELF
+            amount: 16
+      task_w10_06:
+        type: CRAFT
+        display-name: "<gradient:#8B4513:#D2691E>Книжные полки</gradient>"
+        material: BOOKSHELF
+        target-amount: 32
+        craft-material: BOOKSHELF
+        reward-exp: 30
+      task_w10_07:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#0000FF:#4169E1>Лазуритовая жила</gradient>"
+        material: LAPIS_ORE
+        target-amount: 128
+        block-material: LAPIS_ORE
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: LAPIS_LAZULI
+            amount: 64
+      task_w10_08:
+        type: CRAFT
+        display-name: "<gradient:#00FFFF:#FF00FF>Стол зачарования</gradient>"
+        material: ENCHANTING_TABLE
+        target-amount: 3
+        craft-material: ENCHANTING_TABLE
+        reward-exp: 40
+      task_w10_09:
+        type: CRAFT
+        display-name: "<gradient:#808080:#D3D3D3>Наковальня</gradient>"
+        material: ANVIL
+        target-amount: 2
+        craft-material: ANVIL
+        reward-exp: 30
+      task_w10_10:
+        type: ENCHANT
+        display-name: "<gradient:#00FFFF:#FFD700>Вершина чар</gradient>"
+        material: ENCHANTED_BOOK
+        target-amount: 15
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 32
+      task_w10_11:
+        type: ENCHANT
+        display-name: "<gradient:#808080:#D3D3D3>Кузнец-ремонтник</gradient>"
+        material: ANVIL
+        target-amount: 8
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: IRON_INGOT
+            amount: 32
+      task_w10_12:
+        type: CRAFT
+        display-name: "<gradient:#FFD700:#B8860B>Редстоун-лампа</gradient>"
+        material: REDSTONE_LAMP
+        target-amount: 16
+        craft-material: REDSTONE_LAMP
+        reward-exp: 25
+      task_w10_13:
+        type: CRAFT
+        display-name: "<gradient:#FF8C00:#FFD700>Громоотвод</gradient>"
+        material: LIGHTNING_ROD
+        target-amount: 8
+        craft-material: LIGHTNING_ROD
+        reward-exp: 20
+        rewards:
+          reward_1:
+            material: COPPER_INGOT
+            amount: 16
+      task_w10_14:
+        type: CRAFT
+        display-name: "<gradient:#00FF00:#32CD32>Поршень</gradient>"
+        material: PISTON
+        target-amount: 16
+        craft-material: PISTON
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: REDSTONE
+            amount: 32
+      task_w10_15:
+        type: CRAFT
+        display-name: "<gradient:#FF0000:#8B0000>Наблюдатель</gradient>"
+        material: OBSERVER
+        target-amount: 8
+        craft-material: OBSERVER
+        reward-exp: 25
+        rewards:
+          reward_1:
+            material: REDSTONE
+            amount: 32
+      task_w10_16:
+        type: SMELT
+        display-name: "<gradient:#87CEEB:#B0C4DE>Плавка стекла</gradient>"
+        material: GLASS
+        target-amount: 256
+        item-material: GLASS
+        reward-exp: 35
+      task_w10_17:
+        type: DELIVER
+        display-name: "<gradient:#0000FF:#4169E1>Сдать лазурит</gradient>"
+        material: LAPIS_LAZULI
+        target-amount: 128
+        item-material: LAPIS_LAZULI
+        reward-exp: 35
+      task_w10_18:
+        type: DELIVER
+        display-name: "<gradient:#FFFFFF:#F5F5F5>Сдать книги</gradient>"
+        material: BOOK
+        target-amount: 128
+        item-material: BOOK
+        reward-exp: 35
+        rewards:
+          reward_1:
+            material: BOOKSHELF
+            amount: 32
+      task_w10_19:
+        type: CONSUME_POTION
+        display-name: "<gradient:#00BFFF:#1E90FF>Скоростной чародей</gradient>"
+        material: POTION
+        target-amount: 10
+        potion-effect: SPEED
+        reward-exp: 40
+      task_w10_20:
+        type: ENCHANT
+        display-name: "<gradient:#FFD700:#FFA500>Зачаровать инструмент</gradient>"
+        material: IRON_PICKAXE
+        target-amount: 5
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 16
+      task_w10_21:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFD700:#FFA500>Светокаменщик</gradient>"
+        material: GLOWSTONE
+        target-amount: 128
+        block-material: GLOWSTONE
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: GLOWSTONE_DUST
+            amount: 256
+      task_w10_22:
+        type: CRAFT
+        display-name: "<gradient:#DEB887:#8B4513>Проигрыватель</gradient>"
+        material: JUKEBOX
+        target-amount: 2
+        craft-material: JUKEBOX
+        reward-exp: 30
+      task_w10_23:
+        type: BREW
+        display-name: "<gradient:#FF69B4:#FF1493>Зелья регенерации</gradient>"
+        material: POTION
+        target-amount: 8
+        reward-exp: 45
+        rewards:
+          reward_1:
+            material: GHAST_TEAR
+            amount: 4
+      task_w10_24:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#00FFFF:#9370DB>Зачарованный запас</gradient>"
+        material: ENCHANTED_BOOK
+        target-amount: 8
+        item-material: ENCHANTED_BOOK
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 32
+      task_w10_25:
+        type: CRAFT
+        display-name: "<gradient:#00FFFF:#FFD700>Чаро-книги</gradient>"
+        material: ENCHANTED_BOOK
+        target-amount: 3
+        craft-material: ENCHANTED_BOOK
+        reward-exp: 50
+      task_w10_26:
+        type: ENCHANT
+        display-name: "<gradient:#FF00FF:#FF1493>Массовое зачарование</gradient>"
+        material: ENCHANTING_TABLE
+        target-amount: 20
+        reward-exp: 70
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 48
+      task_w10_27:
+        type: KILL
+        display-name: "<gradient:#FF00FF:#8B008B>Эндермен-ферма опыта</gradient>"
+        material: ENDER_PEARL
+        target-amount: 50
+        entity-type: ENDERMAN
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 32
+      task_w10_28:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FFA500>Эксперт чар</gradient>"
+        material: EXPERIENCE_BOTTLE
+        target-amount: 64
+        item-material: EXPERIENCE_BOTTLE
+        reward-exp: 70
+
+  # ═══════════════════════════════════════════════════════════
+  # W11 — Босс-хантер (★★★★★) 85qp | Незеритовые поножи Unb3 Prot4 + Звезда
+  # ═══════════════════════════════════════════════════════════
+  week_11:
+    display-name: "<gradient:#FF0000:#FFD700>☠ Неделя 11 — Босс-хантер</gradient>"
+    quest-points: 85
+    rewards:
+      reward_1:
+        command: '/minecraft:give %player% minecraft:netherite_leggings[enchantments={unbreaking:3,protection:4},item_name=''{"bold":true,"color":"gold","text":"Поножи Охотника"}'' 1'
+      reward_2:
+        material: NETHER_STAR
+        amount: 1
+    tasks:
+      task_w11_01:
+        type: KILL
+        display-name: "<gradient:#2F2F2F:#FF0000>Убийца Визера</gradient>"
+        material: NETHER_STAR
+        target-amount: 1
+        entity-type: WITHER
+        reward-exp: 100
+        rewards:
+          reward_1:
+            material: NETHER_STAR
+            amount: 1
+      task_w11_02:
+        type: KILL
+        display-name: "<gradient:#00CED1:#00008B>Древний страж</gradient>"
+        material: SPONGE
+        target-amount: 1
+        entity-type: ELDER_GUARDIAN
+        reward-exp: 80
+        rewards:
+          reward_1:
+            material: SPONGE
+            amount: 16
+      task_w11_03:
+        type: KILL
+        display-name: "<gradient:#808080:#FF0000>Заклинатель</gradient>"
+        material: TOTEM_OF_UNDYING
+        target-amount: 2
+        entity-type: EVOKER
+        reward-exp: 70
+      task_w11_04:
+        type: KILL
+        display-name: "<gradient:#8B4513:#FF0000>Разоритель</gradient>"
+        material: SADDLE
+        target-amount: 2
+        entity-type: RAVAGER
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: SADDLE
+            amount: 2
+      task_w11_05:
+        type: KILL
+        display-name: "<gradient:#FF8C00:#FF4500>Ифритовый повелитель</gradient>"
+        material: BLAZE_ROD
+        target-amount: 40
+        entity-type: BLAZE
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 64
+      task_w11_06:
+        type: KILL
+        display-name: "<gradient:#FF4500:#8B0000>Магмовый куб</gradient>"
+        material: MAGMA_CREAM
+        target-amount: 25
+        entity-type: MAGMA_CUBE
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: MAGMA_BLOCK
+            amount: 32
+      task_w11_07:
+        type: KILL
+        display-name: "<gradient:#FFFFFF:#E8E8E8>Охотник на гастов</gradient>"
+        material: GHAST_TEAR
+        target-amount: 15
+        entity-type: GHAST
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: GHAST_TEAR
+            amount: 4
+      task_w11_08:
+        type: KILL
+        display-name: "<gradient:#2F2F2F:#1C1C1C>Черепной гринд</gradient>"
+        material: WITHER_SKELETON_SKULL
+        target-amount: 15
+        entity-type: WITHER_SKELETON
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: COAL_BLOCK
+            amount: 8
+      task_w11_09:
+        type: KILL
+        display-name: "<gradient:#FFD700:#DAA520>Пиглин-истребитель</gradient>"
+        material: GOLDEN_SWORD
+        target-amount: 40
+        entity-type: PIGLIN
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: GOLD_BLOCK
+            amount: 4
+      task_w11_10:
+        type: KILL
+        display-name: "<gradient:#8B4513:#A0522D>Хоглин-охотник</gradient>"
+        material: COOKED_PORKCHOP
+        target-amount: 25
+        entity-type: HOGLIN
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: LEATHER
+            amount: 32
+      task_w11_11:
+        type: CRAFT
+        display-name: "<gradient:#2F2F2F:#FF0000>Черепа Визера</gradient>"
+        material: WITHER_SKELETON_SKULL
+        target-amount: 3
+        craft-material: WITHER_SKELETON_SKULL
+        reward-exp: 60
+      task_w11_12:
+        type: DELIVER
+        display-name: "<gradient:#FFD700:#DAA520>Сдать золото</gradient>"
+        material: GOLD_BLOCK
+        target-amount: 8
+        item-material: GOLD_BLOCK
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: GOLDEN_APPLE
+            amount: 8
+      task_w11_13:
+        type: DELIVER
+        display-name: "<gradient:#00FFFF:#00CED1>Сдать алмазы</gradient>"
+        material: DIAMOND
+        target-amount: 32
+        item-material: DIAMOND
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: DIAMOND_BLOCK
+            amount: 2
+      task_w11_14:
+        type: CRAFT
+        display-name: "<gradient:#696969:#FFD700>Незеритовый слиток</gradient>"
+        material: NETHERITE_INGOT
+        target-amount: 3
+        craft-material: NETHERITE_INGOT
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: NETHERITE_SCRAP
+            amount: 4
+      task_w11_15:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FFA500>Тотем бессмертия</gradient>"
+        material: TOTEM_OF_UNDYING
+        target-amount: 3
+        item-material: TOTEM_OF_UNDYING
+        reward-exp: 60
+      task_w11_16:
+        type: ENCHANT
+        display-name: "<gradient:#00FFFF:#FF00FF>Чары на меч</gradient>"
+        material: DIAMOND_SWORD
+        target-amount: 8
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 32
+      task_w11_17:
+        type: ENCHANT
+        display-name: "<gradient:#4169E1:#00FFFF>Чары на броню</gradient>"
+        material: DIAMOND_CHESTPLATE
+        target-amount: 8
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 32
+      task_w11_18:
+        type: CRAFT
+        display-name: "<gradient:#FFD700:#FFA500>Золотое яблоко</gradient>"
+        material: GOLDEN_APPLE
+        target-amount: 16
+        craft-material: GOLDEN_APPLE
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: ENCHANTED_GOLDEN_APPLE
+            amount: 2
+      task_w11_19:
+        type: EAT
+        display-name: "<gradient:#FFD700:#FFA500>Пир Нотча</gradient>"
+        material: ENCHANTED_GOLDEN_APPLE
+        target-amount: 5
+        item-material: ENCHANTED_GOLDEN_APPLE
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: GOLD_BLOCK
+            amount: 4
+      task_w11_20:
+        type: CONSUME_POTION
+        display-name: "<gradient:#FF4500:#DC143C>Сила перед битвой</gradient>"
+        material: POTION
+        target-amount: 10
+        potion-effect: STRENGTH
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 16
+      task_w11_21:
+        type: CONSUME_POTION
+        display-name: "<gradient:#FF69B4:#FF1493>Регенерация</gradient>"
+        material: POTION
+        target-amount: 8
+        potion-effect: REGENERATION
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: GHAST_TEAR
+            amount: 4
+      task_w11_22:
+        type: CRAFT
+        display-name: "<gradient:#FF00FF:#FF1493>Энд-кристаллы</gradient>"
+        material: END_CRYSTAL
+        target-amount: 8
+        craft-material: END_CRYSTAL
+        reward-exp: 60
+      task_w11_23:
+        type: BREW
+        display-name: "<gradient:#FF4500:#FF6347>Зелья силы</gradient>"
+        material: POTION
+        target-amount: 12
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: BLAZE_POWDER
+            amount: 16
+      task_w11_24:
+        type: BREW
+        display-name: "<gradient:#FF69B4:#FF1493>Зелья лечения</gradient>"
+        material: POTION
+        target-amount: 12
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: GLISTERING_MELON_SLICE
+            amount: 16
+      task_w11_25:
+        type: KILL
+        display-name: "<gradient:#FF0000:#FFD700>Охотник на боссов</gradient>"
+        material: NETHER_STAR
+        target-amount: 3
+        entity-type: WITHER
+        reward-exp: 150
+        rewards:
+          reward_1:
+            material: NETHER_STAR
+            amount: 1
+      task_w11_26:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#2F2F2F:#FF0000>Коллекция звёзд</gradient>"
+        material: NETHER_STAR
+        target-amount: 3
+        item-material: NETHER_STAR
+        reward-exp: 150
+      task_w11_27:
+        type: KILL
+        display-name: "<gradient:#FF00FF:#FF0000>Истребитель драконов</gradient>"
+        material: DRAGON_HEAD
+        target-amount: 3
+        entity-type: ENDER_DRAGON
+        reward-exp: 150
+        rewards:
+          reward_1:
+            material: DRAGON_HEAD
+            amount: 1
+      task_w11_28:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FFFFFF>Незеритовый сет</gradient>"
+        material: NETHERITE_CHESTPLATE
+        target-amount: 4
+        item-material: NETHERITE_INGOT
+        reward-exp: 100
+        rewards:
+          reward_1:
+            material: NETHERITE_SCRAP
+            amount: 8
+
+  # ═══════════════════════════════════════════════════════════
+  # W12 — Властелин (★★★★★) 100qp | Незеритовый блок x2 + Звезда
+  # ═══════════════════════════════════════════════════════════
+  week_12:
+    display-name: "<gradient:#FFD700:#FFFFFF>♛ Неделя 12 — Властелин мира</gradient>"
+    quest-points: 100
+    rewards:
+      reward_1:
+        material: NETHERITE_BLOCK
+        amount: 2
+      reward_2:
+        material: NETHER_STAR
+        amount: 1
+    tasks:
+      task_w12_01:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#FFD700:#FFA500>Король шахт</gradient>"
+        material: NETHERITE_PICKAXE
+        target-amount: 1000
+        block-material: STONE
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: DIAMOND
+            amount: 8
+      task_w12_02:
+        type: KILL
+        display-name: "<gradient:#FF0000:#8B0000>Безжалостный убийца</gradient>"
+        material: DIAMOND_SWORD
+        target-amount: 100
+        entity-type: ZOMBIE
+        reward-exp: 80
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 32
+      task_w12_03:
+        type: FISH
+        display-name: "<gradient:#00CED1:#4682B4>Легендарный рыбак</gradient>"
+        material: COD
+        target-amount: 64
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: ENCHANTED_BOOK
+            amount: 1
+      task_w12_04:
+        type: BREW
+        display-name: "<gradient:#9932CC:#FF00FF>Великий алхимик</gradient>"
+        material: BREWING_STAND
+        target-amount: 20
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 16
+      task_w12_05:
+        type: ENCHANT
+        display-name: "<gradient:#00FFFF:#FF00FF>Магистр чар</gradient>"
+        material: ENCHANTED_BOOK
+        target-amount: 20
+        reward-exp: 70
+        rewards:
+          reward_1:
+            material: EXPERIENCE_BOTTLE
+            amount: 32
+      task_w12_06:
+        type: SMELT
+        display-name: "<gradient:#FF8C00:#FF4500>Промышленный магнат</gradient>"
+        material: BLAST_FURNACE
+        target-amount: 256
+        item-material: IRON_INGOT
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: COAL_BLOCK
+            amount: 8
+      task_w12_07:
+        type: TRADE
+        display-name: "<gradient:#32CD32:#FFD700>Империя торговли</gradient>"
+        material: EMERALD_BLOCK
+        target-amount: 100
+        reward-exp: 70
+        rewards:
+          reward_1:
+            material: EMERALD_BLOCK
+            amount: 1
+      task_w12_08:
+        type: BREED
+        display-name: "<gradient:#F5DEB3:#FFD700>Великий заводчик</gradient>"
+        material: WHEAT
+        target-amount: 30
+        entity-type: COW
+        reward-exp: 50
+      task_w12_09:
+        type: EAT
+        display-name: "<gradient:#FF6347:#FF4500>Королевский пир</gradient>"
+        material: COOKED_BEEF
+        target-amount: 64
+        item-material: COOKED_BEEF
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: GOLDEN_APPLE
+            amount: 8
+      task_w12_10:
+        type: BLOCK_PLACE
+        display-name: "<gradient:#8B4513:#D2691E>Великий строитель</gradient>"
+        material: OAK_PLANKS
+        target-amount: 500
+        block-material: OAK_PLANKS
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: OAK_LOG
+            amount: 64
+      task_w12_11:
+        type: CRAFT
+        display-name: "<gradient:#D3D3D3:#FFD700>Мастер-ремесленник</gradient>"
+        material: CRAFTING_TABLE
+        target-amount: 50
+        craft-material: STONE_PICKAXE
+        reward-exp: 50
+      task_w12_12:
+        type: KILL
+        display-name: "<gradient:#FF0000:#FFD700>Охотник на боссов</gradient>"
+        material: NETHER_STAR
+        target-amount: 5
+        entity-type: WITHER
+        reward-exp: 150
+        rewards:
+          reward_1:
+            material: NETHER_STAR
+            amount: 1
+      task_w12_13:
+        type: KILL
+        display-name: "<gradient:#FF00FF:#FF0000>Истребитель драконов</gradient>"
+        material: DRAGON_HEAD
+        target-amount: 5
+        entity-type: ENDER_DRAGON
+        reward-exp: 150
+        rewards:
+          reward_1:
+            material: DRAGON_HEAD
+            amount: 1
+      task_w12_14:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#696969:#FFD700>Полный незерит</gradient>"
+        material: NETHERITE_CHESTPLATE
+        target-amount: 4
+        item-material: NETHERITE_INGOT
+        reward-exp: 80
+        rewards:
+          reward_1:
+            material: NETHERITE_SCRAP
+            amount: 4
+      task_w12_15:
+        type: EAT
+        display-name: "<gradient:#FFD700:#FFA500>Пир Нотча</gradient>"
+        material: ENCHANTED_GOLDEN_APPLE
+        target-amount: 5
+        item-material: ENCHANTED_GOLDEN_APPLE
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: GOLD_BLOCK
+            amount: 4
+      task_w12_16:
+        type: CONSUME_POTION
+        display-name: "<gradient:#9932CC:#00FFFF>Алхимический мастер</gradient>"
+        material: POTION
+        target-amount: 20
+        potion-effect: REGENERATION
+        reward-exp: 50
+        rewards:
+          reward_1:
+            material: GHAST_TEAR
+            amount: 4
+      task_w12_17:
+        type: BUCKET_FILL
+        display-name: "<gradient:#00BFFF:#FF4500>Водно-лавовый маг</gradient>"
+        material: WATER_BUCKET
+        target-amount: 20
+        item-material: WATER_BUCKET
+        reward-exp: 30
+      task_w12_18:
+        type: SHEAR
+        display-name: "<gradient:#FFFFFF:#FFD700>Мастер-парикмахер</gradient>"
+        material: SHEARS
+        target-amount: 32
+        reward-exp: 30
+        rewards:
+          reward_1:
+            material: WHITE_WOOL
+            amount: 64
+      task_w12_19:
+        type: BLOCK_BREAK
+        display-name: "<gradient:#8B4513:#FFD700>Незеритовый магнат</gradient>"
+        material: ANCIENT_DEBRIS
+        target-amount: 32
+        block-material: ANCIENT_DEBRIS
+        reward-exp: 80
+        rewards:
+          reward_1:
+            material: NETHERITE_SCRAP
+            amount: 16
+      task_w12_20:
+        type: FISH
+        display-name: "<gradient:#00CED1:#FFD700>Сокровища глубин</gradient>"
+        material: ENCHANTED_BOOK
+        target-amount: 10
+        reward-exp: 60
+        rewards:
+          reward_1:
+            material: NAUTILUS_SHELL
+            amount: 2
+      task_w12_21:
+        type: SHEAR
+        display-name: "<gradient:#FFD700:#FFA500>Золотая стрижка</gradient>"
+        material: SHEARS
+        target-amount: 50
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: WHITE_WOOL
+            amount: 128
+      task_w12_22:
+        type: CRAFT
+        display-name: "<gradient:#00FFFF:#FFD700>Маяк надежды</gradient>"
+        material: BEACON
+        target-amount: 3
+        craft-material: BEACON
+        reward-exp: 80
+        rewards:
+          reward_1:
+            material: IRON_BLOCK
+            amount: 64
+      task_w12_23:
+        type: CRAFT
+        display-name: "<gradient:#FF69B4:#FF1493>Торт победителя</gradient>"
+        material: CAKE
+        target-amount: 10
+        craft-material: CAKE
+        reward-exp: 40
+        rewards:
+          reward_1:
+            material: CAKE
+            amount: 3
+      task_w12_24:
+        type: DELIVER
+        display-name: "<gradient:#696969:#FFD700>Незеритовый запас</gradient>"
+        material: NETHERITE_INGOT
+        target-amount: 4
+        item-material: NETHERITE_INGOT
+        reward-exp: 100
+        rewards:
+          reward_1:
+            material: NETHERITE_SCRAP
+            amount: 8
+      task_w12_25:
+        type: KILL
+        display-name: "<gradient:#FF0000:#FFD700>Босс-марафон</gradient>"
+        material: NETHER_STAR
+        target-amount: 10
+        entity-type: WITHER
+        reward-exp: 200
+        rewards:
+          reward_1:
+            material: NETHER_STAR
+            amount: 3
+      task_w12_26:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FFFFFF>Легендарный капитал</gradient>"
+        material: NETHERITE_BLOCK
+        target-amount: 2
+        item-material: NETHERITE_INGOT
+        reward-exp: 100
+      task_w12_27:
+        type: CRAFT
+        display-name: "<gradient:#FFD700:#FFA500>Незеритовые блоки</gradient>"
+        material: NETHERITE_BLOCK
+        target-amount: 3
+        craft-material: NETHERITE_BLOCK
+        reward-exp: 100
+      task_w12_28:
+        type: HAVE_IN_INVENTORY
+        display-name: "<gradient:#FFD700:#FF0000>Абсолютная власть</gradient>"
+        material: NETHER_STAR
+        target-amount: 5
+        item-material: NETHER_STAR
+        reward-exp: 200
+        rewards:
+          reward_1:
+            material: NETHERITE_BLOCK
+            amount: 2
