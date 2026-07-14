@@ -1,0 +1,78 @@
+# ============================================================
+# QuartaSMP_Core .gitignore
+# Keep source/config templates in Git, ignore generated output
+# and local machine/server runtime files.
+# ============================================================
+
+# Maven build output
+target/
+*.class
+
+# Packaged plugin jars and generated artifacts
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA / JetBrains local project files
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code / editors
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and crash dumps
+*.log
+logs/
+crash-reports/
+hs_err_pid*
+replay_pid*
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# Runtime plugin/server data - do not commit real player data
+plugins/
+server/
+world/
+world_nether/
+world_the_end/
+banned-ips.json
+banned-players.json
+ops.json
+usercache.json
+whitelist.json
+eula.txt
+server.properties
+
+# QuartaSMP runtime data if copied into the repo
+playerdata/
+data/
+cache/
+*.db
+*.sqlite
+*.sqlite3
+
+# Keep source resources tracked
+!src/main/resources/*.yml
+!pom.xml
+!README.md
